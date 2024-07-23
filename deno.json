@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "postgres": "jsr:@bartlomieju/postgres"
+  },
+  "tasks": {
+    "initdb": "deno run -A --env nitdb.ts",
+    "start": "deno run -A --unstable-cron --env --watch main.ts"
+  }
+}
