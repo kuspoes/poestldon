@@ -130,7 +130,7 @@ Deno.cron("Sedot Notification dari Gotosocial", "*/4 * * * *", () => {
   markNotif();
 });
 
-Deno.cron("Bersih - bersih data", "0 0 1 * *", () => {
+Deno.cron("Bersih - bersih data", "0 0 * * *", () => {
   deleteNotif();
   console.log("Delete data");
 });
