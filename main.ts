@@ -150,7 +150,7 @@ async function sendLogTele(msg: string) {
         chat_id: `${Deno.env.get("TELE_CHATID")}`,
         parse_mode: "markdown",
         text: `🔥 *Info*
-![]()
+![koceng](https://i.ibb.co.com/jyZFWRp/cat-shredding.gif)
 ${msg}
 ${kapan}
         `,
