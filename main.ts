@@ -1,6 +1,19 @@
 import { pool } from "./db.ts";
 const conn = await pool.connect();
 
+interface NeonData {
+  id: number;
+  inreplyto: string;
+  post_id: string;
+  created_at: Date;
+  handler: string;
+  display_name: string;
+  type: string;
+  status: string;
+  ctext: string;
+  remark: string;
+}
+
 async function requestNotif() {
   const f = await fetch(`${Deno.env.get("GTS_API")}`, {
     method: "GET",
@@ -51,7 +64,7 @@ async function sendNotif() {
     WHERE remark = 'USEND'
     ORDER BY created_at ASC
     `;
-    const data = query.rows;
+    const data: NeonData = query.rows;
 
     for (const d of data) {
       let flag;
@@ -97,7 +110,7 @@ ${flag} ${d.type} you!
 _${d.handler}_
 ${flag}  ${d.type} you!
 
-"${d.status.replace(/(<([^>]+)>)/gi, "")}"
+"${d.status}"
 
 [source](https://kauaku.us/@poes/statuses/${d.inreplyto})
       `,
@@ -124,6 +137,28 @@ async function deleteNotif() {
     `;
 }
 
+async function sendLogTele(msg: string) {
+  const kapan = Date();
+  await fetch(
+    `https://api.telegram.org/bot${Deno.env.get("TELE_BOT")}/sendMessage`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "Application/json",
+      },
+      body: JSON.stringify({
+        chat_id: `${Deno.env.get("TELE_CHATID")}`,
+        parse_mode: "markdown",
+        text: `🔥 *Info*
+![]()
+${msg}
+${kapan}
+        `,
+      }),
+    },
+  );
+}
+
 Deno.cron("Sedot Notification dari Gotosocial", "*/4 * * * *", () => {
   requestNotif();
   sendNotif();
@@ -132,7 +167,7 @@ Deno.cron("Sedot Notification dari Gotosocial", "*/4 * * * *", () => {
 
 Deno.cron("Bersih - bersih data", "0 0 * * 7", () => {
   deleteNotif();
-  console.log("Delete data");
+  sendLogTele("Proses pembersihan database telah dilakukan");
 });
 
 Deno.serve({ port: 80 }, (_req: string) => new Response("Avada Kenava!"));
