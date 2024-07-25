@@ -64,7 +64,7 @@ async function sendNotif() {
     WHERE remark = 'USEND'
     ORDER BY created_at ASC
     `;
-    const data: NeonData = query.rows;
+    const data = query.rows;
 
     for (const d of data) {
       let flag;
@@ -77,6 +77,7 @@ async function sendNotif() {
       } else if (d.type === "favourite") {
         flag = "💖";
       }
+
       if (d.type === "follow") {
         await fetch(
           `https://api.telegram.org/bot${Deno.env.get("TELE_BOT")}/sendMessage`,
@@ -87,7 +88,7 @@ async function sendNotif() {
             },
             body: JSON.stringify({
               chat_id: `${Deno.env.get("TELE_CHATID")}`,
-              parse_mode: "markdown",
+              parse_mode: "Markdown",
               text: `*${d.display_name}*
 _${d.handler}_
 ${flag} ${d.type} you!
@@ -105,12 +106,12 @@ ${flag} ${d.type} you!
             },
             body: JSON.stringify({
               chat_id: `${Deno.env.get("TELE_CHATID")}`,
-              parse_mode: "markdown",
+              parse_mode: "Markdown",
               text: `*${d.display_name}*
 _${d.handler}_
 ${flag}  ${d.type} you!
 
-"${d.status}"
+❝${d.status.replace(/(<([^>]+)>)/gi, "")}❞
 
 [source](https://kauaku.us/@poes/statuses/${d.inreplyto})
       `,
@@ -148,9 +149,8 @@ async function sendLogTele(msg: string) {
       },
       body: JSON.stringify({
         chat_id: `${Deno.env.get("TELE_CHATID")}`,
-        parse_mode: "markdown",
+        parse_mode: "Markdown",
         text: `🔥 *Info*
-![koceng](https://i.ibb.co.com/jyZFWRp/cat-shredding.gif)
 ${msg}
 ${kapan}
         `,
@@ -159,10 +159,14 @@ ${kapan}
   );
 }
 
-Deno.cron("Sedot Notification dari Gotosocial", "*/4 * * * *", () => {
+Deno.cron("Sedot Notification dari Gotosocial", "*/2 * * * *", () => {
   requestNotif();
+  console.log("fetch data from gotosocial at ", Date());
   sendNotif();
-  markNotif();
+  console.log("send data to telegram", Date());
+  setTimeout((markNotif) => {
+    console.log("mark db data is already send", Date());
+  }, 10 * 1000);
 });
 
 Deno.cron("Bersih - bersih data", "0 0 * * 7", () => {
