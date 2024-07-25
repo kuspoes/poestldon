@@ -164,7 +164,7 @@ Deno.cron("Sedot Notification dari Gotosocial", "*/5 * * * *", () => {
   console.log("fetch data from gotosocial at ", Date());
   sendNotif();
   console.log("send data to telegram", Date());
-  setTimeout(markNotif, 5000);
+  markNotif();
   console.log("mark data as send");
 });
 
