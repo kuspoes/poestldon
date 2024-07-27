@@ -1,4 +1,4 @@
-import { assertEquals } from "jsr:@std/assert@1";
+import { assertEquals, assert } from "jsr:@std/assert@1";
 import { Pool } from "jsr:@bartlomieju/postgres";
 
 interface NeonData {
@@ -28,4 +28,18 @@ Deno.test("database", async (t) => {
   });
 
   client.end();
+});
+
+Deno.test("gotosocial fetch", async (t) => {
+  const response = await fetch(`${Deno.env.get("GTS_API")}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "Application/json",
+      Authorization: `Bearer ${Deno.env.get("GTS_TOKEN")}`,
+    },
+  });
+  assert(response.ok == true);
+  assert(response.status == 200);
+  assert(response.redirected == false);
+  await response.body?.cancel();
 });
