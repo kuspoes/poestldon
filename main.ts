@@ -135,7 +135,9 @@ async function markNotif() {
 async function deleteNotif() {
   await conn.queryObject`
     DELETE from ptldn
-    `;
+    WHERE post_id NOT IN(
+      (SELECT post_id from pltdn LIMIT 3 ORDER BY created_at ASC)
+    )`;
 }
 
 async function sendLogTele(msg: string) {
@@ -168,7 +170,7 @@ Deno.cron("Sedot Notification dari Gotosocial", "*/5 * * * *", () => {
   console.log("mark data as send");
 });
 
-Deno.cron("Bersih - bersih data", "0 0 * * 7", () => {
+Deno.cron("Bersih - bersih data", "0 0 1 * *", () => {
   deleteNotif();
   sendLogTele("Proses pembersihan database telah dilakukan");
 });
