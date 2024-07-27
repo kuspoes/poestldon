@@ -1,6 +1,7 @@
 {
   "imports": {
-    "postgres": "jsr:@bartlomieju/postgres"
+    "postgres": "jsr:@bartlomieju/postgres",
+    "turndown": "npm:turndown"
   },
   "tasks": {
     "initdb": "deno run -A --env nitdb.ts",

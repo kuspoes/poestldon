@@ -1,4 +1,5 @@
 import { pool } from "./db.ts";
+
 const conn = await pool.connect();
 
 interface NeonData {
@@ -136,7 +137,7 @@ async function deleteNotif() {
   await conn.queryObject`
     DELETE from ptldn
     WHERE post_id NOT IN(
-      (SELECT post_id from pltdn LIMIT 3 ORDER BY created_at ASC)
+      (SELECT post_id from pltdn LIMIT 3 ORDER BY created_at DESC)
     )`;
 }
 
@@ -161,7 +162,7 @@ ${kapan}
   );
 }
 
-Deno.cron("Sedot Notification dari Gotosocial", "*/5 * * * *", () => {
+Deno.cron("Sedot Notification dari Gotosocial", "*/3 * * * *", () => {
   requestNotif();
   console.log("fetch data from gotosocial at ", Date());
   sendNotif();
@@ -174,5 +175,20 @@ Deno.cron("Bersih - bersih data", "0 0 1 * *", () => {
   deleteNotif();
   sendLogTele("Proses pembersihan database telah dilakukan");
 });
+
+/*
+async function testTd() {
+  const t = await conn.queryObject`
+    SELECT * FROM ptldn
+    ORDER BY created_at DESC
+    LIMIT 1
+    `;
+  const d = t.rows;
+  for (const x of d) {
+    console.log("JSON Stringify :", JSON.stringify(x.status));
+    console.log("Turn Down :", td.turndown(JSON.stringify(x.status)));
+  }
+}
+*/
 
 Deno.serve({ port: 80 }, (_req: string) => new Response("Avada Kenava!"));
