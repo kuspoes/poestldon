@@ -39,7 +39,7 @@ async function requestNotif() {
     }
 
     if (d.type === "follow") {
-      conn.queryObject`
+      conn.queryObject<NeonData>`
           INSERT INTO ptldn
           (post_id, created_at, handler, display_name, type, remark)
           VALUES
@@ -47,7 +47,7 @@ async function requestNotif() {
           ON CONFLICT (post_id) DO NOTHING
         `;
     } else {
-      conn.queryObject`
+      conn.queryObject<NeonData>`
           INSERT INTO ptldn
           (inreplyto, post_id, created_at, handler, display_name, type, status, remark)
           VALUES
@@ -60,7 +60,7 @@ async function requestNotif() {
 
 async function sendNotif() {
   try {
-    const query = await conn.queryObject`
+    const query = await conn.queryObject<NeonData>`
     SELECT * FROM ptldn
     WHERE remark = 'USEND'
     ORDER BY created_at ASC
@@ -127,14 +127,14 @@ ${flag}  ${d.type} you!
 }
 
 async function markNotif() {
-  await conn.queryObject`
+  await conn.queryObject<NeonData>`
     UPDATE ptldn
     SET remark = 'SEND'
     `;
 }
 
 async function deleteNotif() {
-  await conn.queryObject`
+  await conn.queryObject<NeonData>`
     DELETE from ptldn
     WHERE post_id NOT IN(
       (SELECT post_id from pltdn LIMIT 3 ORDER BY created_at DESC)
@@ -191,4 +191,4 @@ async function testTd() {
 }
 */
 
-Deno.serve({ port: 80 }, (_req: string) => new Response("Avada Kenava!"));
+Deno.serve({ port: 80 }, (_req) => new Response("Avada Kenava!"));
