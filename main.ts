@@ -178,7 +178,7 @@ Deno.cron("Bersih - bersih data", "0 0 1 * *", () => {
 
 /*
 async function testTd() {
-  const t = await conn.queryObject`
+  const t = await conn.queryObject<NeonData>`
     SELECT * FROM ptldn
     ORDER BY created_at DESC
     LIMIT 1

@@ -3,6 +3,7 @@
   "packages": {
     "specifiers": {
       "jsr:@bartlomieju/postgres": "jsr:@bartlomieju/postgres@0.17.2",
+      "jsr:@std/assert@1": "jsr:@std/assert@1.0.0",
       "jsr:@std/assert@^0.213.1": "jsr:@std/assert@0.213.1",
       "jsr:@std/async@0.213.1": "jsr:@std/async@0.213.1",
       "jsr:@std/bytes@0.213.1": "jsr:@std/bytes@0.213.1",
@@ -11,6 +12,7 @@
       "jsr:@std/datetime@0.213.1": "jsr:@std/datetime@0.213.1",
       "jsr:@std/encoding@0.213.1": "jsr:@std/encoding@0.213.1",
       "jsr:@std/fmt@0.213.1": "jsr:@std/fmt@0.213.1",
+      "jsr:@std/internal@^1.0.1": "jsr:@std/internal@1.0.1",
       "jsr:@std/io@0.213.1": "jsr:@std/io@0.213.1",
       "jsr:@std/path@0.213.1": "jsr:@std/path@0.213.1",
       "npm:turndown": "npm:turndown@7.2.0"
@@ -32,6 +34,12 @@
       "@std/assert@0.213.1": {
         "integrity": "24c28178b30c8e0782c18e8e94ea72b16282207569cdd10ffb9d1d26f2edebfe"
       },
+      "@std/assert@1.0.0": {
+        "integrity": "0e4f6d873f7f35e2a1e6194ceee39686c996b9e5d134948e644d35d4c4df2008",
+        "dependencies": [
+          "jsr:@std/internal@^1.0.1"
+        ]
+      },
       "@std/async@0.213.1": {
         "integrity": "c7e230912fca7e25ed4befbdc1a494acc855d527c178269b8c9de40649c4dc86"
       },
@@ -49,6 +57,9 @@
       },
       "@std/fmt@0.213.1": {
         "integrity": "a06d31777566d874b9c856c10244ac3e6b660bdec4c82506cd46be052a1082c3"
+      },
+      "@std/internal@1.0.1": {
+        "integrity": "6f8c7544d06a11dd256c8d6ba54b11ed870aac6c5aeafff499892662c57673e6"
       },
       "@std/io@0.213.1": {
         "integrity": "18ee1ab872d43077d9ced51ffae38093ad4e818d2b23c3b18a6683edf5f428ae",
