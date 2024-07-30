@@ -21,7 +21,7 @@ Deno.test("database", async (t) => {
 
   await t.step("insert data", async () => {
     const u = await client.queryObject<NeonData>(
-      "INSERT INTO ptldn (post_id, status) VALUES ('testid12345678', 'Testing') RETURNING *",
+      "INSERT INTO poestololdon (post_id, status) VALUES ('testid12345678', 'Testing') RETURNING *",
     );
     // harusnya failed disini karena post sudah pernah dimasukkan
     assertEquals(u.rows.length, 1);

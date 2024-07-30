@@ -11,6 +11,7 @@ interface NeonData {
   display_name: string;
   type: string;
   status: string;
+  url: string;
   ctext: string;
   remark: string;
 }
@@ -40,7 +41,7 @@ async function requestNotif() {
 
     if (d.type === "follow") {
       conn.queryObject<NeonData>`
-          INSERT INTO ptldn
+          INSERT INTO poestololdon
           (post_id, created_at, handler, display_name, type, remark)
           VALUES
           (${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${remark})
@@ -48,10 +49,10 @@ async function requestNotif() {
         `;
     } else {
       conn.queryObject<NeonData>`
-          INSERT INTO ptldn
-          (inreplyto, post_id, created_at, handler, display_name, type, status, remark)
+          INSERT INTO poestololdon
+          (inreplyto, post_id, created_at, handler, display_name, type, status, url, remark)
           VALUES
-          (${inreply}, ${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${content}, ${remark})
+          (${inreply}, ${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${content}, ${d.status.url}, ${remark})
           ON CONFLICT (post_id) DO NOTHING
         `;
     }
@@ -61,12 +62,11 @@ async function requestNotif() {
 async function sendNotif() {
   try {
     const query = await conn.queryObject<NeonData>`
-    SELECT * FROM ptldn
+    SELECT * FROM poestololdon
     WHERE remark = 'USEND'
     ORDER BY created_at ASC
     `;
     const data = query.rows;
-
     for (const d of data) {
       let flag;
       if (d.type === "follow") {
@@ -98,6 +98,15 @@ ${flag} ${d.type} you!
           },
         );
       } else {
+        let link: string;
+        if (d.type != "mention") {
+          link = d.url;
+        } else {
+          link = `https://kauaku.us/@poes/statuses/${d.inreplyto}`;
+        }
+
+        //console.log("type :", d.type + "url : ", d.url);
+
         await fetch(
           `https://api.telegram.org/bot${Deno.env.get("TELE_BOT")}/sendMessage`,
           {
@@ -110,12 +119,14 @@ ${flag} ${d.type} you!
               parse_mode: "Markdown",
               text: `*${d.display_name}*
 _${d.handler}_
-${flag}  ${d.type} you!
+${flag}  ${d.type} your post!
+
 
 ❝${d.status.replace(/(<([^>]+)>)/gi, "")}❞
 
-[source](https://kauaku.us/@poes/statuses/${d.inreplyto})
-      `,
+
+[source](${link})
+`,
             }),
           },
         );
@@ -128,14 +139,14 @@ ${flag}  ${d.type} you!
 
 async function markNotif() {
   await conn.queryObject<NeonData>`
-    UPDATE ptldn
+    UPDATE poestololdon
     SET remark = 'SEND'
     `;
 }
 
 async function deleteNotif() {
   await conn.queryObject<NeonData>`
-    DELETE from ptldn
+    DELETE from poestololdon
     WHERE post_id NOT IN(
       (SELECT post_id from pltdn LIMIT 3 ORDER BY created_at DESC)
     )`;
@@ -177,9 +188,9 @@ Deno.cron("Bersih - bersih data", "0 0 1 * *", () => {
 });
 
 /*
-async function testTd() {
+async function poestololdonTd() {
   const t = await conn.queryObject<NeonData>`
-    SELECT * FROM ptldn
+    SELECT * FROM poestololdon
     ORDER BY created_at DESC
     LIMIT 1
     `;

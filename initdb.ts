@@ -7,7 +7,7 @@ const conn = await pool.connect();
 async function initDb() {
   try {
     await conn.queryObject`
-      CREATE TABLE test_table (
+      CREATE TABLE poestololdon (
         id SERIAL PRIMARY KEY,
         inreplyto VARCHAR(100),
         post_id VARCHAR(100) UNIQUE,
@@ -16,6 +16,7 @@ async function initDb() {
         display_name VARCHAR(256),
         type VARCHAR(20),
         status VARCHAR(10000),
+        url VARCHAR(1000),
         ctext VARCHAR(10000),
         remark VARCHAR(10)
       )
