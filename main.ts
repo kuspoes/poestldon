@@ -1,20 +1,7 @@
 import { pool } from "./db.ts";
+import { NeonData } from "./NeonData.ts"
 
 const conn = await pool.connect();
-
-interface NeonData {
-  id: number;
-  inreplyto: string;
-  post_id: string;
-  created_at: Date;
-  handler: string;
-  display_name: string;
-  type: string;
-  status: string;
-  url: string;
-  ctext: string;
-  remark: string;
-}
 
 async function requestNotif() {
   const f = await fetch(`${Deno.env.get("GTS_API")}`, {
@@ -32,8 +19,8 @@ async function requestNotif() {
     let inreply: string;
     let content: string;
     if (d.type === "follow") {
-      inreply = "-";
-      content = "-";
+      inreply = "null";
+      content = "null";
     } else {
       inreply = d.status.in_reply_to_id;
       content = d.status.content;
@@ -105,8 +92,6 @@ ${flag} ${d.type} you!
           link = `https://kauaku.us/@poes/statuses/${d.inreplyto}`;
         }
 
-        //console.log("type :", d.type + "url : ", d.url);
-
         await fetch(
           `https://api.telegram.org/bot${Deno.env.get("TELE_BOT")}/sendMessage`,
           {
@@ -145,11 +130,15 @@ async function markNotif() {
 }
 
 async function deleteNotif() {
-  await conn.queryObject<NeonData>`
-    DELETE from poestololdon
-    WHERE post_id NOT IN(
-      (SELECT post_id from pltdn LIMIT 3 ORDER BY created_at DESC)
-    )`;
+  try {
+    await conn.queryObject<NeonData>`
+      DELETE from poestololdon
+      WHERE post_id NOT IN(
+        (SELECT post_id FROM poestololdon ORDER BY created_at DESC LIMIT 5)
+      )`;
+  } catch(err) {
+    console.log(err)
+  }
 }
 
 async function sendLogTele(msg: string) {
