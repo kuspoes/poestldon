@@ -1,5 +1,5 @@
 import { pool } from "./db.ts";
-import { NeonData } from "./NeonData.ts"
+import { NeonData } from "./NeonData.ts";
 
 const conn = await pool.connect();
 
@@ -101,7 +101,7 @@ ${flag} ${d.type} you!
             },
             body: JSON.stringify({
               chat_id: `${Deno.env.get("TELE_CHATID")}`,
-              parse_mode: "Markdown",
+              parse_mode: "html",
               text: `*${d.display_name}*
 _${d.handler}_
 ${flag}  ${d.type} your post!
@@ -136,8 +136,8 @@ async function deleteNotif() {
       WHERE post_id NOT IN(
         (SELECT post_id FROM poestololdon ORDER BY created_at DESC LIMIT 5)
       )`;
-  } catch(err) {
-    console.log(err)
+  } catch (err) {
+    console.log(err);
   }
 }
 
