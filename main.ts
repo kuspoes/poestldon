@@ -102,15 +102,15 @@ ${flag} ${d.type} you!
             body: JSON.stringify({
               chat_id: `${Deno.env.get("TELE_CHATID")}`,
               parse_mode: "html",
-              text: `*${d.display_name}*
-_${d.handler}_
+              text: `<b>${d.display_name}</b>
+<i>${d.handler}</i>
 ${flag}  ${d.type} your post!
 
 
 ❝${d.status.replace(/(<([^>]+)>)/gi, "")}❞
 
 
-[source](${link})
+<a href=${link}>source</a>
 `,
             }),
           },

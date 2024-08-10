@@ -8,9 +8,3 @@ const content =
 
 const c = td.turndown(content);
 console.log(c);
-
-function stripTags(str: string) {
-  if (str == null || str == "") return false;
-  else str = str.toString();
-  return str.replace(/(<([^>]+)>)/gi, "");
-}
