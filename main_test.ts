@@ -55,7 +55,7 @@ Deno.test("telegram bot test", async (t) => {
       },
       body: JSON.stringify({
         chat_id: `${Deno.env.get("TELE_CHATID")}`,
-        parse_mode: "markdown",
+        parse_mode: "html",
         text: `*title message*
 Ini adalah test message`,
       }),

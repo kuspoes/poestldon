@@ -54,6 +54,7 @@ async function sendNotif() {
     ORDER BY created_at ASC
     `;
     const data = query.rows;
+    //console.log(data);
     for (const d of data) {
       let flag;
       if (d.type === "follow") {
@@ -85,6 +86,7 @@ ${flag} ${d.type} you!
           },
         );
       } else {
+        console.log("not follow");
         let link: string;
         if (d.type != "mention") {
           link = d.url;
@@ -101,16 +103,17 @@ ${flag} ${d.type} you!
             },
             body: JSON.stringify({
               chat_id: `${Deno.env.get("TELE_CHATID")}`,
-              parse_mode: "html",
-              text: `<b>${d.display_name}</b>
-<i>${d.handler}</i>
+              parse_mode: "markdown",
+              text: `*${d.display_name}*
+_${d.handler}_
 ${flag}  ${d.type} your post!
 
 
 ❝${d.status.replace(/(<([^>]+)>)/gi, "")}❞
 
 
-<a href=${link}>source</a>
+[source](${link})
+
 `,
             }),
           },
@@ -162,9 +165,9 @@ ${kapan}
   );
 }
 
-Deno.cron("Sedot Notification dari Gotosocial", "*/3 * * * *", () => {
-  requestNotif();
-  console.log("fetch data from gotosocial at ", Date());
+Deno.cron("Sedot Notification dari Gotosocial", "*/1 * * * *", () => {
+  /*requestNotif();
+  console.log("fetch data from gotosocial at ", Date());*/
   sendNotif();
   console.log("send data to telegram", Date());
   markNotif();
