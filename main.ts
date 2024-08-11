@@ -166,8 +166,8 @@ ${kapan}
 }
 
 Deno.cron("Sedot Notification dari Gotosocial", "*/1 * * * *", () => {
-  /*requestNotif();
-  console.log("fetch data from gotosocial at ", Date());*/
+  requestNotif();
+  console.log("fetch data from gotosocial at ", Date());
   sendNotif();
   console.log("send data to telegram", Date());
   markNotif();
