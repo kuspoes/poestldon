@@ -176,7 +176,7 @@ ${kapan}
   );
 }
 
-Deno.cron("Sedon-simpan-kirim", "*/1 * * * *", () => {
+Deno.cron("Sedon-simpan-kirim", "*/3 * * * *", () => {
   requestNotif();
   console.log("fetch data from gotosocial at ", Date());
   sendNotif();
