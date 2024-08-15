@@ -86,13 +86,20 @@ ${flag} ${d.type} you!
           },
         );
       } else {
-        console.log("not follow");
+        //console.log("not follow");
         let link: string;
         if (d.type != "mention") {
           link = d.url;
         } else {
           link = `https://kauaku.us/@poes/statuses/${d.inreplyto}`;
+          //link = `https://dev.phanpy.social/#/kauaku.us/s/${d.inreplyto}`;
         }
+
+        const regex = /<br>/i;
+        const sanitasi = d.status.replace(regex, " %0A ");
+        //console.log(sanitasi);
+        const t_content = sanitasi.replace(/(<([^>]+)>)/gi, "");
+        //console.log(t_content);
 
         await fetch(
           `https://api.telegram.org/bot${Deno.env.get("TELE_BOT")}/sendMessage`,
@@ -103,13 +110,13 @@ ${flag} ${d.type} you!
             },
             body: JSON.stringify({
               chat_id: `${Deno.env.get("TELE_CHATID")}`,
-              parse_mode: "markdown",
+              parse_mode: "Markdown",
               text: `*${d.display_name}*
 _${d.handler}_
 ${flag}  ${d.type} your post!
 
 
-❝${d.status.replace(/(<([^>]+)>)/gi, "")}❞
+❝${t_content}❞
 
 
 [source](${link})
