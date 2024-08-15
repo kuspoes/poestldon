@@ -1,5 +1,6 @@
 import { pool } from "./db.ts";
 import { NeonData } from "./NeonData.ts";
+import TurndownService from "turndown";
 
 const conn = await pool.connect();
 
@@ -95,10 +96,13 @@ ${flag} ${d.type} you!
           //link = `https://dev.phanpy.social/#/kauaku.us/s/${d.inreplyto}`;
         }
 
-        const regex = /<br>/i;
-        const sanitasi = d.status.replace(regex, " %0A ");
+        const td = new TurndownService();
+
+        //const regex = /<br>/i;
+        //const sanitasi = d.status.replace(regex, " %0A ");
         //console.log(sanitasi);
-        const t_content = sanitasi.replace(/(<([^>]+)>)/gi, "");
+        //const t_content = sanitasi.replace(/(<([^>]+)>)/gi, "");
+        const t_content = td.turndown(d.status);
         //console.log(t_content);
 
         await fetch(
@@ -172,7 +176,7 @@ ${kapan}
   );
 }
 
-Deno.cron("Sedon-simpan-kirim", "*/3 * * * *", () => {
+Deno.cron("Sedon-simpan-kirim", "*/1 * * * *", () => {
   requestNotif();
   console.log("fetch data from gotosocial at ", Date());
   sendNotif();
