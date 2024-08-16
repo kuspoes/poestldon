@@ -97,11 +97,13 @@ ${flag} ${d.type} you!
         }
 
         const td = new TurndownService();
+        td.addRule("Remove link", {
+          filter: ["a"],
+          replacement: function (content) {
+            return "**" + content + "**";
+          },
+        });
 
-        //const regex = /<br>/i;
-        //const sanitasi = d.status.replace(regex, " %0A ");
-        //console.log(sanitasi);
-        //const t_content = sanitasi.replace(/(<([^>]+)>)/gi, "");
         const t_content = td.turndown(d.status);
         //console.log(t_content);
 
