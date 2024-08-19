@@ -99,7 +99,7 @@ ${flag} ${d.type} you!
         const td = new TurndownService();
         td.addRule("Remove link", {
           filter: ["a"],
-          replacement: function (content) {
+          replacement: function (content: string) {
             return "**" + content + "**";
           },
         });
