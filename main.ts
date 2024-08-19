@@ -204,19 +204,4 @@ Deno.cron("Bersih - bersih data", "0 0 1 * *", () => {
   sendLogTele("Proses pembersihan database telah dilakukan");
 });
 
-/*
-async function poestololdonTd() {
-  const t = await conn.queryObject<NeonData>`
-    SELECT * FROM poestololdon
-    ORDER BY created_at DESC
-    LIMIT 1
-    `;
-  const d = t.rows;
-  for (const x of d) {
-    console.log("JSON Stringify :", JSON.stringify(x.status));
-    console.log("Turn Down :", td.turndown(JSON.stringify(x.status)));
-  }
-}
-*/
-
 Deno.serve({ port: 80 }, (_req) => new Response("Avada Kenava!"));
