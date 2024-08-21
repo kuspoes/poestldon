@@ -190,7 +190,7 @@ async function sendLogTele(msg: string) {
   }
 }
 
-Deno.cron("Sedon-simpan-kirim", "*/3 * * * *", () => {
+Deno.cron("Sedot-simpan-kirim", "*/3 * * * *", () => {
   requestNotif();
   console.log("fetch data from gotosocial at ", Date());
   sendNotif();

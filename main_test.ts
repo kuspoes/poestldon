@@ -31,7 +31,7 @@ Deno.test("database", async (t) => {
   client.end();
 });
 
-Deno.test("gotosocial fetch", async (t) => {
+Deno.test("gotosocial fetch", async (_t) => {
   const response = await fetch(`${Deno.env.get("GTS_API")}`, {
     method: "GET",
     headers: {
@@ -45,7 +45,7 @@ Deno.test("gotosocial fetch", async (t) => {
   await response.body?.cancel();
 });
 
-Deno.test("telegram bot test", async (t) => {
+Deno.test("telegram bot test", async () => {
   const tele = await fetch(
     `https://api.telegram.org/bot${Deno.env.get("TELE_BOT")}/sendMessage`,
     {
