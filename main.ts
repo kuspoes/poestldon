@@ -156,10 +156,22 @@ async function markNotif() {
 async function deleteNotif() {
   try {
     await conn.queryObject<NeonData>`
-      DELETE from poestololdon
-      WHERE post_id NOT IN(
-        (SELECT post_id FROM poestololdon ORDER BY created_at DESC LIMIT 5)
-      )`;
+      DROP TABLE poestololdon;
+      CREATE TABLE poestololdon (
+        id SERIAL PRIMARY KEY,
+        inreplyto VARCHAR(100),
+        post_id VARCHAR(100) UNIQUE,
+        created_at TIMESTAMP,
+        handler VARCHAR(50),
+        display_name VARCHAR(256),
+        type VARCHAR(20),
+        status VARCHAR(10000),
+        url VARCHAR(1000),
+        ctext VARCHAR(10000),
+        remark VARCHAR(10))
+      `;
+    await requestNotif();
+    await markNotif();
   } catch (err) {
     console.log(err);
   }
