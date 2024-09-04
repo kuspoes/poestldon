@@ -76,7 +76,13 @@ async function sendNotif() {
       } else if (d.type === "favourite") {
         flag = "💖";
       }
-      const mediaUrl = d.media;
+
+      let mediaUrl;
+      if (d.media === null) {
+        mediaUrl = "";
+      } else {
+        mediaUrl = `![img](${d.media})`;
+      }
 
       if (d.type === "follow") {
         await fetch(
@@ -133,7 +139,7 @@ ${flag}  ${d.type} your post!
 
 ❝${t_content}❞
 
-![media](${mediaUrl})
+${mediaUrl}
 
 [source](${link})
 

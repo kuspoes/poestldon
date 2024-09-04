@@ -1,5 +1,5 @@
-import { pool } from "./db.ts";
-import { NeonData } from "./NeonData.ts";
+import { pool } from "./../db.ts";
+import { NeonData } from "./../NeonData.ts";
 import TurndownService from "turndown";
 
 const conn = await pool.connect();
@@ -31,7 +31,7 @@ async function requestNotif() {
 
       //console.log(d.status.media_attachments);
       for (const m of d.status.media_attachments) {
-        const mediaUrl = m.url;
+        // const mediaUrl = m.url;
 
         await conn.queryObject<NeonData>`
           INSERT INTO testtololdon
