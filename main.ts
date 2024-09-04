@@ -28,22 +28,26 @@ async function requestNotif() {
         content = d.status.content;
       }
 
-      if (d.type === "follow") {
-        conn.queryObject<NeonData>`
+      for await (const media of d.status.media_attachments) {
+        const mediaUrl = media.url;
+
+        if (d.type === "follow") {
+          conn.queryObject<NeonData>`
             INSERT INTO poestololdon
             (post_id, created_at, handler, display_name, type, remark)
             VALUES
             (${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${remark})
             ON CONFLICT (post_id) DO NOTHING
           `;
-      } else {
-        conn.queryObject<NeonData>`
+        } else {
+          conn.queryObject<NeonData>`
             INSERT INTO poestololdon
-            (inreplyto, post_id, created_at, handler, display_name, type, status, url, remark)
+            (inreplyto, post_id, created_at, handler, display_name, type, status, url, remark, media)
             VALUES
-            (${inreply}, ${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${content}, ${d.status.url}, ${remark})
+            (${inreply}, ${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${content}, ${d.status.url}, ${remark}, ${mediaUrl})
             ON CONFLICT (post_id) DO NOTHING
           `;
+        }
       }
     }
   } catch (err) {
@@ -60,6 +64,7 @@ async function sendNotif() {
     `;
     const data = query.rows;
     //console.log(data);
+
     for (const d of data) {
       let flag;
       if (d.type === "follow") {
@@ -71,6 +76,7 @@ async function sendNotif() {
       } else if (d.type === "favourite") {
         flag = "💖";
       }
+      const mediaUrl = d.media;
 
       if (d.type === "follow") {
         await fetch(
@@ -125,9 +131,9 @@ ${flag} ${d.type} you!
 _${d.handler}_
 ${flag}  ${d.type} your post!
 
-
 ❝${t_content}❞
 
+![media](${mediaUrl})
 
 [source](${link})
 
@@ -141,6 +147,8 @@ ${flag}  ${d.type} your post!
     console.log(error);
   }
 }
+
+sendNotif();
 
 async function markNotif() {
   try {
@@ -168,7 +176,8 @@ async function deleteNotif() {
         status VARCHAR(10000),
         url VARCHAR(1000),
         ctext VARCHAR(10000),
-        remark VARCHAR(10))
+        remark VARCHAR(10)),
+        media VARCHAR(1000),
       `;
     await requestNotif();
     await markNotif();

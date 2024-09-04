@@ -10,4 +10,5 @@ export interface NeonData {
   url: string;
   ctext: string;
   remark: string;
+  media: string;
 }
