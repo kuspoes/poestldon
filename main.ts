@@ -154,8 +154,6 @@ ${mediaUrl}
   }
 }
 
-sendNotif();
-
 async function markNotif() {
   try {
     await conn.queryObject<NeonData>`
