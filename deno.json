@@ -5,6 +5,6 @@
   },
   "tasks": {
     "initdb": "deno run -A --env nitdb.ts",
-    "start": "deno run -A --unstable-cron --unstable-kv --env --watch main.ts"
+    "start": "deno run -A --unstable-cron --env --watch main.ts"
   }
 }
