@@ -109,7 +109,7 @@ ${flag} ${d.type} you!
 
         let mediaUrl;
         if (d.media === null || d.media === "{}") {
-          mediaUrl = "❞";
+          mediaUrl = "-";
         } else {
           mediaUrl = `❞
 
@@ -125,6 +125,7 @@ ${flag} ${d.type} you!
         });
 
         const t_content = td.turndown(d.status);
+        const attachements = td.turndown(mediaUrl);
         //console.log(t_content);
 
         await fetch(
@@ -143,7 +144,9 @@ ${flag}  ${d.type} your post!
 
 ❝
 ${t_content}
-${mediaUrl}
+❞
+
+${attachements}
 
 [source](${link})
 
