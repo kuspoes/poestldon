@@ -15,7 +15,7 @@ async function requestNotif() {
     });
 
     const data = await f.json();
-    console.log(data);
+    //console.log(data);
 
     for (const d of data) {
       const remark: string = "USEND";
@@ -109,7 +109,7 @@ ${flag} ${d.type} you!
 
         let mediaUrl;
         if (d.media === null || d.media === "{}") {
-          mediaUrl = "";
+          mediaUrl = "<br />";
         } else {
           mediaUrl = `![img](${d.media})`;
         }
