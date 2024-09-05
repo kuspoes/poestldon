@@ -15,6 +15,7 @@ async function requestNotif() {
     });
 
     const data = await f.json();
+    console.log(data);
 
     for (const d of data) {
       const remark: string = "USEND";
@@ -28,26 +29,27 @@ async function requestNotif() {
         content = d.status.content;
       }
 
+      let mediaUrl = [];
       for await (const media of d.status.media_attachments) {
-        const mediaUrl = media.url;
+        mediaUrl = media.url;
+      }
 
-        if (d.type === "follow") {
-          conn.queryObject<NeonData>`
+      if (d.type === "follow") {
+        conn.queryObject<NeonData>`
             INSERT INTO poestololdon
             (post_id, created_at, handler, display_name, type, remark)
             VALUES
             (${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${remark})
             ON CONFLICT (post_id) DO NOTHING
           `;
-        } else {
-          conn.queryObject<NeonData>`
+      } else {
+        conn.queryObject<NeonData>`
             INSERT INTO poestololdon
             (inreplyto, post_id, created_at, handler, display_name, type, status, url, remark, media)
             VALUES
             (${inreply}, ${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${content}, ${d.status.url}, ${remark}, ${mediaUrl})
             ON CONFLICT (post_id) DO NOTHING
           `;
-        }
       }
     }
   } catch (err) {
@@ -77,13 +79,6 @@ async function sendNotif() {
         flag = "💖";
       }
 
-      let mediaUrl;
-      if (d.media === null) {
-        mediaUrl = "";
-      } else {
-        mediaUrl = `![img](${d.media})`;
-      }
-
       if (d.type === "follow") {
         await fetch(
           `https://api.telegram.org/bot${Deno.env.get("TELE_BOT")}/sendMessage`,
@@ -110,6 +105,13 @@ ${flag} ${d.type} you!
         } else {
           link = `https://kauaku.us/@poes/statuses/${d.inreplyto}`;
           //link = `https://dev.phanpy.social/#/kauaku.us/s/${d.inreplyto}`;
+        }
+
+        let mediaUrl;
+        if (d.media === null || d.media === "{}") {
+          mediaUrl = "";
+        } else {
+          mediaUrl = `![img](${d.media})`;
         }
 
         const td = new TurndownService();
