@@ -3,6 +3,10 @@ import { NeonData } from "./NeonData.ts";
 import TurndownService from "turndown";
 
 const conn = await pool.connect();
+// punya endpoint tapi tak punya token itu sami mawon ga bisa konek
+const kv = await Deno.openKv(
+  "https://api.deno.com/databases/8224906d-742a-4220-9a66-638bf8d37da3/connect",
+);
 
 async function requestNotif() {
   try {
@@ -15,41 +19,59 @@ async function requestNotif() {
     });
 
     const data = await f.json();
-    //console.log(data);
+    const data_id = [];
+    for await (const d of data) data_id.push(d.id);
 
-    for (const d of data) {
-      const remark: string = "USEND";
-      let inreply: string;
-      let content: string;
-      if (d.type === "follow") {
-        inreply = "null";
-        content = "null";
+    const kvData = kv.list({ prefix: ["notif_id"] });
+    const kvDataId = [];
+    for await (const k of kvData) kvDataId.push(k.value);
+
+    for (const v of kvDataId) {
+      const x = data_id.includes(v);
+      if (x == true) {
+        console.log("data sudah ada");
       } else {
-        inreply = d.status.in_reply_to_id;
-        content = d.status.content;
-      }
+        for (const d of data) {
+          const remark: string = "USEND";
+          let inreply: string;
+          let content: string;
+          if (d.type === "follow") {
+            inreply = "null";
+            content = "null";
+          } else {
+            inreply = d.status.in_reply_to_id;
+            content = d.status.content;
+          }
 
-      let mediaUrl = [];
-      for await (const media of d.status.media_attachments) {
-        mediaUrl = media.url;
-      }
+          let mediaUrl = [];
+          for await (const media of d.status.media_attachments) {
+            mediaUrl = media.url;
+          }
 
-      if (d.type === "follow") {
-        conn.queryObject<NeonData>`
-            INSERT INTO poestololdon
-            (post_id, created_at, handler, display_name, type, remark)
-            VALUES
-            (${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${remark})
-            ON CONFLICT (post_id) DO NOTHING
-          `;
-      } else {
-        conn.queryObject<NeonData>`
-            INSERT INTO poestololdon
-            (inreplyto, post_id, created_at, handler, display_name, type, status, url, remark, media)
-            VALUES
-            (${inreply}, ${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${content}, ${d.status.url}, ${remark}, ${mediaUrl})
-            ON CONFLICT (post_id) DO NOTHING
-          `;
+          if (d.type === "follow") {
+            conn.queryObject<NeonData>`
+                INSERT INTO poestololdon
+                (post_id, created_at, handler, display_name, type, remark)
+                VALUES
+                (${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${remark})
+                ON CONFLICT (post_id) DO NOTHING
+              `;
+          } else {
+            conn.queryObject<NeonData>`
+                INSERT INTO poestololdon
+                (inreplyto, post_id, created_at, handler, display_name, type, status, url, remark, media)
+                VALUES
+                (${inreply}, ${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${content}, ${d.status.url}, ${remark}, ${mediaUrl})
+                ON CONFLICT (post_id) DO NOTHING
+              `;
+          }
+        }
+      }
+    }
+    for (const di of data_id) {
+      const res = await kv.set(["notif_id", di], di);
+      if (res.ok === false) {
+        throw new Error(`tidak bisa menulis ke KV!`);
       }
     }
   } catch (err) {
@@ -218,7 +240,7 @@ async function sendLogTele(msg: string) {
   }
 }
 
-Deno.cron("Sedot-simpan-kirim", "*/3 * * * *", () => {
+Deno.cron("Sedot-simpan-kirim", "*/2 * * * *", () => {
   requestNotif();
   console.log("fetch data from gotosocial at ", Date());
   sendNotif();
