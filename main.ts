@@ -141,8 +141,8 @@ ${flag} ${d.type} you!
 _${d.handler}_
 ${flag}  ${d.type} your post!
 
-❝${t_content}
-
+❝
+${t_content}
 ${mediaUrl}
 
 [source](${link})
