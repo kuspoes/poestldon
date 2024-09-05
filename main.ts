@@ -109,9 +109,11 @@ ${flag} ${d.type} you!
 
         let mediaUrl;
         if (d.media === null || d.media === "{}") {
-          mediaUrl = "<br />";
+          mediaUrl = "❞";
         } else {
-          mediaUrl = `![img](${d.media})`;
+          mediaUrl = `❞
+
+            ![img](${d.media})`;
         }
 
         const td = new TurndownService();
@@ -139,7 +141,7 @@ ${flag} ${d.type} you!
 _${d.handler}_
 ${flag}  ${d.type} your post!
 
-❝${t_content}❞
+❝${t_content}
 
 ${mediaUrl}
 
