@@ -4,9 +4,11 @@ import TurndownService from "turndown";
 
 const conn = await pool.connect();
 // punya endpoint tapi tak punya token itu sami mawon ga bisa konek
-const kv = await Deno.openKv(
-  "https://api.deno.com/databases/8224906d-742a-4220-9a66-638bf8d37da3/connect",
-);
+// saat push hapus endpoint url karena tidak akan terbaca di deploy
+const kv = await Deno
+  .openKv
+  //"https://api.deno.com/databases/8224906d-742a-4220-9a66-638bf8d37da3/connect",
+  ();
 
 async function requestNotif() {
   try {
