@@ -68,13 +68,13 @@ async function requestNotif() {
               `;
           }
         }
-      }
-    }
-    for (const di of data_id) {
-      const res = await kv.set(["notif_id", di], di);
-      if (res.ok === false) {
-        throw new Error(`tidak bisa menulis ke KV!`);
-      }
+        for (const di of data_id) {
+          const res = await kv.set(["notif_id", di], di);
+          if (!res.ok) {
+            throw new Error(`tidak bisa menulis ke KV!`);
+          }
+        }
+      } // else
     }
   } catch (err) {
     console.log(err);
