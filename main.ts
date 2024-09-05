@@ -113,7 +113,7 @@ ${flag} ${d.type} you!
         } else {
           mediaUrl = `❞
 
-            ![img](${d.media})`;
+            <img src=${mediaUrl} />`;
         }
 
         const td = new TurndownService();
