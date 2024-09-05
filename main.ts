@@ -109,11 +109,11 @@ ${flag} ${d.type} you!
 
         let mediaUrl;
         if (d.media === null || d.media === "{}") {
-          mediaUrl = "-";
+          mediaUrl = "❞";
         } else {
           mediaUrl = `❞
 
-            <img src=${mediaUrl} />`;
+            <img src="${d.media}" alt="img" />`;
         }
 
         const td = new TurndownService();
@@ -142,11 +142,7 @@ ${flag} ${d.type} you!
 _${d.handler}_
 ${flag}  ${d.type} your post!
 
-❝
-${t_content}
-❞
-
-${attachements}
+❝${t_content} ${attachements}
 
 [source](${link})
 
@@ -222,7 +218,7 @@ async function sendLogTele(msg: string) {
   }
 }
 
-Deno.cron("Sedot-simpan-kirim", "*/2 * * * *", () => {
+Deno.cron("Sedot-simpan-kirim", "*/1 * * * *", () => {
   requestNotif();
   console.log("fetch data from gotosocial at ", Date());
   sendNotif();
