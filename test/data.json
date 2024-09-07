@@ -1,0 +1,1039 @@
+[
+  {
+    "id": "01J757MVDCCGVCSM9PVJ1NJTDB",
+    "type": "mention",
+    "created_at": "2024-09-07T03:15:06.000Z",
+    "account": {
+      "id": "01HYFDZJR4AD4AEY95B3PY2MT8",
+      "username": "testeraphy",
+      "acct": "testeraphy@ktem.eu.org",
+      "display_name": "testeraphy",
+      "locked": false,
+      "discoverable": false,
+      "bot": false,
+      "created_at": "2024-05-22T05:57:07.698Z",
+      "note": "<p><span>Selfhost lagi karena sebelah penuh warna dan lemot.<br><br>Suka komputer, internet, teknologi, sbc, open source, sesuatu yang rahasia, asik, seru, menantang, lucu dimana saja. Suka maling dari internet juga.<br><br>Isi notes/catatan tidak begitu mencerminkan manusianya. Kadang suka maling gambar - gambar asik dari internet (mungkin NSFW), tetapi tenang saja karena biasanya saya beri flag sensitive content / content warning.</span></p>",
+      "url": "https://ice.ktem.eu.org/@testeraphy",
+      "avatar": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFDZWFJSWD930NE549N0ETS.png",
+      "avatar_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFDZWFJSWD930NE549N0ETS.jpg",
+      "header": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFE01KBWTEK4EJDT0FEEWNK.png",
+      "header_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFE01KBWTEK4EJDT0FEEWNK.jpg",
+      "followers_count": 0,
+      "following_count": 0,
+      "statuses_count": 309,
+      "last_status_at": "2024-09-07T03:15:22.332Z",
+      "emojis": [],
+      "fields": [
+        {
+          "name": "Blog",
+          "value": "blog.netify.my.id",
+          "verified_at": null
+        },
+        {
+          "name": "Matrix",
+          "value": "@testeraphy:beeper.com",
+          "verified_at": null
+        },
+        {
+          "name": "Discord",
+          "value": "testeraphy",
+          "verified_at": null
+        }
+      ]
+    },
+    "status": {
+      "id": "01J757NAJWG6XZKE0R9SNSQ672",
+      "created_at": "2024-09-07T03:15:22.332Z",
+      "in_reply_to_id": "01J756W9G4330VAGM8MMX31YS3",
+      "in_reply_to_account_id": "01V12MTP926SRNSP22TT3EE04K",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": null,
+      "uri": "https://ice.ktem.eu.org/notes/9xv4zjocecsvar2p",
+      "url": "https://ice.ktem.eu.org/notes/9xv4zjocecsvar2p",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "favourited": false,
+      "reblogged": false,
+      "muted": false,
+      "bookmarked": false,
+      "pinned": false,
+      "content": "<p><span class=\"h-card\"><a class=\"u-url mention\" href=\"https://kauaku.us/@poes\" rel=\"nofollow noreferrer noopener\" target=\"_blank\"><span>@poes</span></a></span><span> tanya ke chat gpt..<br>Delet post sih gampang, tapi bisanya tabelnya punya link ke tabel lain.. Kemungkinan Tags, media, mention beda tabel </span>​:neocat_googly_blep:​</p>",
+      "reblog": null,
+      "account": {
+        "id": "01HYFDZJR4AD4AEY95B3PY2MT8",
+        "username": "testeraphy",
+        "acct": "testeraphy@ktem.eu.org",
+        "display_name": "testeraphy",
+        "locked": false,
+        "discoverable": false,
+        "bot": false,
+        "created_at": "2024-05-22T05:57:07.698Z",
+        "note": "<p><span>Selfhost lagi karena sebelah penuh warna dan lemot.<br><br>Suka komputer, internet, teknologi, sbc, open source, sesuatu yang rahasia, asik, seru, menantang, lucu dimana saja. Suka maling dari internet juga.<br><br>Isi notes/catatan tidak begitu mencerminkan manusianya. Kadang suka maling gambar - gambar asik dari internet (mungkin NSFW), tetapi tenang saja karena biasanya saya beri flag sensitive content / content warning.</span></p>",
+        "url": "https://ice.ktem.eu.org/@testeraphy",
+        "avatar": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFDZWFJSWD930NE549N0ETS.png",
+        "avatar_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFDZWFJSWD930NE549N0ETS.jpg",
+        "header": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFE01KBWTEK4EJDT0FEEWNK.png",
+        "header_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFE01KBWTEK4EJDT0FEEWNK.jpg",
+        "followers_count": 0,
+        "following_count": 0,
+        "statuses_count": 309,
+        "last_status_at": "2024-09-07T03:15:22.332Z",
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Blog",
+            "value": "blog.netify.my.id",
+            "verified_at": null
+          },
+          {
+            "name": "Matrix",
+            "value": "@testeraphy:beeper.com",
+            "verified_at": null
+          },
+          {
+            "name": "Discord",
+            "value": "testeraphy",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "01V12MTP926SRNSP22TT3EE04K",
+          "username": "poes",
+          "url": "https://kauaku.us/@poes",
+          "acct": "poes"
+        }
+      ],
+      "tags": [],
+      "emojis": [
+        {
+          "shortcode": "neocat_googly_blep",
+          "url": "https://kauaku.us/fileserver/0142R8SV74V1T89D6DZ59CWZZ3/emoji/original/01KND2364SFSNFG1YWZ7DEJH91.webp",
+          "static_url": "https://kauaku.us/fileserver/0142R8SV74V1T89D6DZ59CWZZ3/emoji/static/01KND2364SFSNFG1YWZ7DEJH91.png",
+          "visible_in_picker": false
+        }
+      ],
+      "card": null,
+      "poll": null
+    }
+  },
+  {
+    "id": "01J756HSF6WW8KTPPPKJ0D48VJ",
+    "type": "mention",
+    "created_at": "2024-09-07T02:55:57.000Z",
+    "account": {
+      "id": "01HYFDZJR4AD4AEY95B3PY2MT8",
+      "username": "testeraphy",
+      "acct": "testeraphy@ktem.eu.org",
+      "display_name": "testeraphy",
+      "locked": false,
+      "discoverable": false,
+      "bot": false,
+      "created_at": "2024-05-22T05:57:07.698Z",
+      "note": "<p><span>Selfhost lagi karena sebelah penuh warna dan lemot.<br><br>Suka komputer, internet, teknologi, sbc, open source, sesuatu yang rahasia, asik, seru, menantang, lucu dimana saja. Suka maling dari internet juga.<br><br>Isi notes/catatan tidak begitu mencerminkan manusianya. Kadang suka maling gambar - gambar asik dari internet (mungkin NSFW), tetapi tenang saja karena biasanya saya beri flag sensitive content / content warning.</span></p>",
+      "url": "https://ice.ktem.eu.org/@testeraphy",
+      "avatar": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFDZWFJSWD930NE549N0ETS.png",
+      "avatar_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFDZWFJSWD930NE549N0ETS.jpg",
+      "header": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFE01KBWTEK4EJDT0FEEWNK.png",
+      "header_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFE01KBWTEK4EJDT0FEEWNK.jpg",
+      "followers_count": 0,
+      "following_count": 0,
+      "statuses_count": 309,
+      "last_status_at": "2024-09-07T03:15:22.332Z",
+      "emojis": [],
+      "fields": [
+        {
+          "name": "Blog",
+          "value": "blog.netify.my.id",
+          "verified_at": null
+        },
+        {
+          "name": "Matrix",
+          "value": "@testeraphy:beeper.com",
+          "verified_at": null
+        },
+        {
+          "name": "Discord",
+          "value": "testeraphy",
+          "verified_at": null
+        }
+      ]
+    },
+    "status": {
+      "id": "01J756J8F7YWAEMSQB3HXWHMBY",
+      "created_at": "2024-09-07T02:56:13.287Z",
+      "in_reply_to_id": "01J756FARGHS9XV6934ADYND01",
+      "in_reply_to_account_id": "01V12MTP926SRNSP22TT3EE04K",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": null,
+      "uri": "https://ice.ktem.eu.org/notes/9xv4ax2e001tghy3",
+      "url": "https://ice.ktem.eu.org/notes/9xv4ax2e001tghy3",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "favourited": false,
+      "reblogged": false,
+      "muted": false,
+      "bookmarked": false,
+      "pinned": false,
+      "content": "<p><span class=\"h-card\"><a class=\"u-url mention\" href=\"https://kauaku.us/@poes\" rel=\"nofollow noreferrer noopener\" target=\"_blank\"><span>@poes</span></a></span><span> </span>​:neocat_laugh_sweat:​<span><br><br>Kenapa ga di perpanjang om?</span></p>",
+      "reblog": null,
+      "account": {
+        "id": "01HYFDZJR4AD4AEY95B3PY2MT8",
+        "username": "testeraphy",
+        "acct": "testeraphy@ktem.eu.org",
+        "display_name": "testeraphy",
+        "locked": false,
+        "discoverable": false,
+        "bot": false,
+        "created_at": "2024-05-22T05:57:07.698Z",
+        "note": "<p><span>Selfhost lagi karena sebelah penuh warna dan lemot.<br><br>Suka komputer, internet, teknologi, sbc, open source, sesuatu yang rahasia, asik, seru, menantang, lucu dimana saja. Suka maling dari internet juga.<br><br>Isi notes/catatan tidak begitu mencerminkan manusianya. Kadang suka maling gambar - gambar asik dari internet (mungkin NSFW), tetapi tenang saja karena biasanya saya beri flag sensitive content / content warning.</span></p>",
+        "url": "https://ice.ktem.eu.org/@testeraphy",
+        "avatar": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFDZWFJSWD930NE549N0ETS.png",
+        "avatar_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFDZWFJSWD930NE549N0ETS.jpg",
+        "header": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFE01KBWTEK4EJDT0FEEWNK.png",
+        "header_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFE01KBWTEK4EJDT0FEEWNK.jpg",
+        "followers_count": 0,
+        "following_count": 0,
+        "statuses_count": 309,
+        "last_status_at": "2024-09-07T03:15:22.332Z",
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Blog",
+            "value": "blog.netify.my.id",
+            "verified_at": null
+          },
+          {
+            "name": "Matrix",
+            "value": "@testeraphy:beeper.com",
+            "verified_at": null
+          },
+          {
+            "name": "Discord",
+            "value": "testeraphy",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "01V12MTP926SRNSP22TT3EE04K",
+          "username": "poes",
+          "url": "https://kauaku.us/@poes",
+          "acct": "poes"
+        }
+      ],
+      "tags": [],
+      "emojis": [
+        {
+          "shortcode": "neocat_laugh_sweat",
+          "url": "https://kauaku.us/fileserver/0142R8SV74V1T89D6DZ59CWZZ3/emoji/original/01JHQF3JV7ASX34D96W6QWBM12.webp",
+          "static_url": "https://kauaku.us/fileserver/0142R8SV74V1T89D6DZ59CWZZ3/emoji/static/01JHQF3JV7ASX34D96W6QWBM12.png",
+          "visible_in_picker": false
+        }
+      ],
+      "card": null,
+      "poll": null
+    }
+  },
+  {
+    "id": "01J7566VR4R6FVVZJEJVFWQS5W",
+    "type": "mention",
+    "created_at": "2024-09-07T02:49:59.000Z",
+    "account": {
+      "id": "01HYFDZJR4AD4AEY95B3PY2MT8",
+      "username": "testeraphy",
+      "acct": "testeraphy@ktem.eu.org",
+      "display_name": "testeraphy",
+      "locked": false,
+      "discoverable": false,
+      "bot": false,
+      "created_at": "2024-05-22T05:57:07.698Z",
+      "note": "<p><span>Selfhost lagi karena sebelah penuh warna dan lemot.<br><br>Suka komputer, internet, teknologi, sbc, open source, sesuatu yang rahasia, asik, seru, menantang, lucu dimana saja. Suka maling dari internet juga.<br><br>Isi notes/catatan tidak begitu mencerminkan manusianya. Kadang suka maling gambar - gambar asik dari internet (mungkin NSFW), tetapi tenang saja karena biasanya saya beri flag sensitive content / content warning.</span></p>",
+      "url": "https://ice.ktem.eu.org/@testeraphy",
+      "avatar": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFDZWFJSWD930NE549N0ETS.png",
+      "avatar_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFDZWFJSWD930NE549N0ETS.jpg",
+      "header": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFE01KBWTEK4EJDT0FEEWNK.png",
+      "header_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFE01KBWTEK4EJDT0FEEWNK.jpg",
+      "followers_count": 0,
+      "following_count": 0,
+      "statuses_count": 309,
+      "last_status_at": "2024-09-07T03:15:22.332Z",
+      "emojis": [],
+      "fields": [
+        {
+          "name": "Blog",
+          "value": "blog.netify.my.id",
+          "verified_at": null
+        },
+        {
+          "name": "Matrix",
+          "value": "@testeraphy:beeper.com",
+          "verified_at": null
+        },
+        {
+          "name": "Discord",
+          "value": "testeraphy",
+          "verified_at": null
+        }
+      ]
+    },
+    "status": {
+      "id": "01J75679AM2X8Y0Y0XDFHTCN01",
+      "created_at": "2024-09-07T02:50:13.716Z",
+      "in_reply_to_id": "01J754PFMCGE8XD9NGZZWVWEEX",
+      "in_reply_to_account_id": "01V12MTP926SRNSP22TT3EE04K",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": null,
+      "uri": "https://ice.ktem.eu.org/notes/9xv437mcs6apnxfz",
+      "url": "https://ice.ktem.eu.org/notes/9xv437mcs6apnxfz",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "favourited": false,
+      "reblogged": false,
+      "muted": false,
+      "bookmarked": false,
+      "pinned": false,
+      "content": "<p><span class=\"h-card\"><a class=\"u-url mention\" href=\"https://kauaku.us/@poes\" rel=\"nofollow noreferrer noopener\" target=\"_blank\"><span>@poes</span></a></span><span> hmm, dikit juga ya<br>Mungkin bisa kurang banyak kalau om banyak hapus post </span>​:neocat_think:​</p>",
+      "reblog": null,
+      "account": {
+        "id": "01HYFDZJR4AD4AEY95B3PY2MT8",
+        "username": "testeraphy",
+        "acct": "testeraphy@ktem.eu.org",
+        "display_name": "testeraphy",
+        "locked": false,
+        "discoverable": false,
+        "bot": false,
+        "created_at": "2024-05-22T05:57:07.698Z",
+        "note": "<p><span>Selfhost lagi karena sebelah penuh warna dan lemot.<br><br>Suka komputer, internet, teknologi, sbc, open source, sesuatu yang rahasia, asik, seru, menantang, lucu dimana saja. Suka maling dari internet juga.<br><br>Isi notes/catatan tidak begitu mencerminkan manusianya. Kadang suka maling gambar - gambar asik dari internet (mungkin NSFW), tetapi tenang saja karena biasanya saya beri flag sensitive content / content warning.</span></p>",
+        "url": "https://ice.ktem.eu.org/@testeraphy",
+        "avatar": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFDZWFJSWD930NE549N0ETS.png",
+        "avatar_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFDZWFJSWD930NE549N0ETS.jpg",
+        "header": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFE01KBWTEK4EJDT0FEEWNK.png",
+        "header_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFE01KBWTEK4EJDT0FEEWNK.jpg",
+        "followers_count": 0,
+        "following_count": 0,
+        "statuses_count": 309,
+        "last_status_at": "2024-09-07T03:15:22.332Z",
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Blog",
+            "value": "blog.netify.my.id",
+            "verified_at": null
+          },
+          {
+            "name": "Matrix",
+            "value": "@testeraphy:beeper.com",
+            "verified_at": null
+          },
+          {
+            "name": "Discord",
+            "value": "testeraphy",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "01V12MTP926SRNSP22TT3EE04K",
+          "username": "poes",
+          "url": "https://kauaku.us/@poes",
+          "acct": "poes"
+        }
+      ],
+      "tags": [],
+      "emojis": [
+        {
+          "shortcode": "neocat_think",
+          "url": "https://kauaku.us/fileserver/0142R8SV74V1T89D6DZ59CWZZ3/emoji/original/021NYR9GP5F51WYKJANBJESE29.webp",
+          "static_url": "https://kauaku.us/fileserver/0142R8SV74V1T89D6DZ59CWZZ3/emoji/static/021NYR9GP5F51WYKJANBJESE29.png",
+          "visible_in_picker": false
+        }
+      ],
+      "card": null,
+      "poll": null
+    }
+  },
+  {
+    "id": "01J74Q4QDV119G6CRGCXB565ZE",
+    "type": "follow",
+    "created_at": "2024-09-06T22:26:41.000Z",
+    "account": {
+      "id": "01HQEA83T1505XCGHYHRMFFFHK",
+      "username": "technomancy",
+      "acct": "technomancy@hey.hagelb.org",
+      "display_name": "technomancy (turbonerd aspect)",
+      "locked": false,
+      "discoverable": true,
+      "bot": false,
+      "created_at": "2024-02-24T19:42:36.445Z",
+      "note": "<p>this is my more tech-focused alt account I run out of my home; my main account is <span class=\"h-card\"><a href=\"https://icosahedron.website/@technomancy\" class=\"u-url mention\" rel=\"nofollow noreferrer noopener\" target=\"_blank\">@<span>technomancy</span></a></span></p><p>I also use this as a test ground for patches to gotosocial including a weird lua-based plugin system</p>",
+      "url": "https://hey.hagelb.org/@technomancy",
+      "avatar": "https://kauaku.us/fileserver/01HQEA83T1505XCGHYHRMFFFHK/attachment/original/01HQEA84CXRGAC95NJTA0HSH2S.png",
+      "avatar_static": "https://kauaku.us/fileserver/01HQEA83T1505XCGHYHRMFFFHK/attachment/small/01HQEA84CXRGAC95NJTA0HSH2S.jpg",
+      "header": "https://kauaku.us/fileserver/01HQEA83T1505XCGHYHRMFFFHK/attachment/original/01HQEA89NRZ1REBFYJ5TXRYXZW.jpg",
+      "header_static": "https://kauaku.us/fileserver/01HQEA83T1505XCGHYHRMFFFHK/attachment/small/01HQEA89NRZ1REBFYJ5TXRYXZW.jpg",
+      "followers_count": 725,
+      "following_count": 105,
+      "statuses_count": 1924,
+      "last_status_at": "2024-05-07T02:15:28.000Z",
+      "emojis": [],
+      "fields": [
+        {
+          "name": "website",
+          "value": "<a href=\"https://technomancy.us/colophon\" rel=\"nofollow noreferrer noopener\" target=\"_blank\">https://technomancy.us/colophon</a>",
+          "verified_at": null
+        },
+        {
+          "name": "he",
+          "value": "him",
+          "verified_at": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "01J74M4SWPH79R9SFMWNXYDJPE",
+    "type": "mention",
+    "created_at": "2024-09-06T21:34:18.000Z",
+    "account": {
+      "id": "01HYFDZJR4AD4AEY95B3PY2MT8",
+      "username": "testeraphy",
+      "acct": "testeraphy@ktem.eu.org",
+      "display_name": "testeraphy",
+      "locked": false,
+      "discoverable": false,
+      "bot": false,
+      "created_at": "2024-05-22T05:57:07.698Z",
+      "note": "<p><span>Selfhost lagi karena sebelah penuh warna dan lemot.<br><br>Suka komputer, internet, teknologi, sbc, open source, sesuatu yang rahasia, asik, seru, menantang, lucu dimana saja. Suka maling dari internet juga.<br><br>Isi notes/catatan tidak begitu mencerminkan manusianya. Kadang suka maling gambar - gambar asik dari internet (mungkin NSFW), tetapi tenang saja karena biasanya saya beri flag sensitive content / content warning.</span></p>",
+      "url": "https://ice.ktem.eu.org/@testeraphy",
+      "avatar": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFDZWFJSWD930NE549N0ETS.png",
+      "avatar_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFDZWFJSWD930NE549N0ETS.jpg",
+      "header": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFE01KBWTEK4EJDT0FEEWNK.png",
+      "header_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFE01KBWTEK4EJDT0FEEWNK.jpg",
+      "followers_count": 0,
+      "following_count": 0,
+      "statuses_count": 309,
+      "last_status_at": "2024-09-07T03:15:22.332Z",
+      "emojis": [],
+      "fields": [
+        {
+          "name": "Blog",
+          "value": "blog.netify.my.id",
+          "verified_at": null
+        },
+        {
+          "name": "Matrix",
+          "value": "@testeraphy:beeper.com",
+          "verified_at": null
+        },
+        {
+          "name": "Discord",
+          "value": "testeraphy",
+          "verified_at": null
+        }
+      ]
+    },
+    "status": {
+      "id": "01J74NMT28GTKGC47C365E386H",
+      "created_at": "2024-09-06T22:00:31.048Z",
+      "in_reply_to_id": "01J74KXRPN27MWAX6Z1PZ73FTZ",
+      "in_reply_to_account_id": "01V12MTP926SRNSP22TT3EE04K",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": null,
+      "uri": "https://ice.ktem.eu.org/notes/9xutqn2f598nx6xf",
+      "url": "https://ice.ktem.eu.org/notes/9xutqn2f598nx6xf",
+      "replies_count": 2,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "favourited": true,
+      "reblogged": false,
+      "muted": false,
+      "bookmarked": false,
+      "pinned": false,
+      "content": "<p><span class=\"h-card\"><a class=\"u-url mention\" href=\"https://kauaku.us/@poes\" rel=\"nofollow noreferrer noopener\" target=\"_blank\"><span>@poes</span></a></span><span> kalau ga salah docs gts pernah nyinggung kok om<br><br></span><a href=\"https://docs.gotosocial.org/en/latest/admin/database_maintenance/\" rel=\"nofollow noreferrer noopener\" target=\"_blank\">docs.gotosocial.org/en/latest/admin/database_maintenance/</a></p>",
+      "reblog": null,
+      "account": {
+        "id": "01HYFDZJR4AD4AEY95B3PY2MT8",
+        "username": "testeraphy",
+        "acct": "testeraphy@ktem.eu.org",
+        "display_name": "testeraphy",
+        "locked": false,
+        "discoverable": false,
+        "bot": false,
+        "created_at": "2024-05-22T05:57:07.698Z",
+        "note": "<p><span>Selfhost lagi karena sebelah penuh warna dan lemot.<br><br>Suka komputer, internet, teknologi, sbc, open source, sesuatu yang rahasia, asik, seru, menantang, lucu dimana saja. Suka maling dari internet juga.<br><br>Isi notes/catatan tidak begitu mencerminkan manusianya. Kadang suka maling gambar - gambar asik dari internet (mungkin NSFW), tetapi tenang saja karena biasanya saya beri flag sensitive content / content warning.</span></p>",
+        "url": "https://ice.ktem.eu.org/@testeraphy",
+        "avatar": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFDZWFJSWD930NE549N0ETS.png",
+        "avatar_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFDZWFJSWD930NE549N0ETS.jpg",
+        "header": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFE01KBWTEK4EJDT0FEEWNK.png",
+        "header_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFE01KBWTEK4EJDT0FEEWNK.jpg",
+        "followers_count": 0,
+        "following_count": 0,
+        "statuses_count": 309,
+        "last_status_at": "2024-09-07T03:15:22.332Z",
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Blog",
+            "value": "blog.netify.my.id",
+            "verified_at": null
+          },
+          {
+            "name": "Matrix",
+            "value": "@testeraphy:beeper.com",
+            "verified_at": null
+          },
+          {
+            "name": "Discord",
+            "value": "testeraphy",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "01V12MTP926SRNSP22TT3EE04K",
+          "username": "poes",
+          "url": "https://kauaku.us/@poes",
+          "acct": "poes"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "card": null,
+      "poll": null
+    }
+  },
+  {
+    "id": "01J74KBV6W0085HE1R80ZBFC29",
+    "type": "mention",
+    "created_at": "2024-09-06T21:20:40.000Z",
+    "account": {
+      "id": "01HYFDZJR4AD4AEY95B3PY2MT8",
+      "username": "testeraphy",
+      "acct": "testeraphy@ktem.eu.org",
+      "display_name": "testeraphy",
+      "locked": false,
+      "discoverable": false,
+      "bot": false,
+      "created_at": "2024-05-22T05:57:07.698Z",
+      "note": "<p><span>Selfhost lagi karena sebelah penuh warna dan lemot.<br><br>Suka komputer, internet, teknologi, sbc, open source, sesuatu yang rahasia, asik, seru, menantang, lucu dimana saja. Suka maling dari internet juga.<br><br>Isi notes/catatan tidak begitu mencerminkan manusianya. Kadang suka maling gambar - gambar asik dari internet (mungkin NSFW), tetapi tenang saja karena biasanya saya beri flag sensitive content / content warning.</span></p>",
+      "url": "https://ice.ktem.eu.org/@testeraphy",
+      "avatar": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFDZWFJSWD930NE549N0ETS.png",
+      "avatar_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFDZWFJSWD930NE549N0ETS.jpg",
+      "header": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFE01KBWTEK4EJDT0FEEWNK.png",
+      "header_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFE01KBWTEK4EJDT0FEEWNK.jpg",
+      "followers_count": 0,
+      "following_count": 0,
+      "statuses_count": 309,
+      "last_status_at": "2024-09-07T03:15:22.332Z",
+      "emojis": [],
+      "fields": [
+        {
+          "name": "Blog",
+          "value": "blog.netify.my.id",
+          "verified_at": null
+        },
+        {
+          "name": "Matrix",
+          "value": "@testeraphy:beeper.com",
+          "verified_at": null
+        },
+        {
+          "name": "Discord",
+          "value": "testeraphy",
+          "verified_at": null
+        }
+      ]
+    },
+    "status": {
+      "id": "01J74MVV0P77MKFXE3RC8NKM96",
+      "created_at": "2024-09-06T21:46:52.822Z",
+      "in_reply_to_id": "01J73WJNVVSNG1JCWWEECHNMAV",
+      "in_reply_to_account_id": "01V12MTP926SRNSP22TT3EE04K",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": null,
+      "uri": "https://ice.ktem.eu.org/notes/9xut93py75b6wbsn",
+      "url": "https://ice.ktem.eu.org/notes/9xut93py75b6wbsn",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "favourited": false,
+      "reblogged": false,
+      "muted": false,
+      "bookmarked": false,
+      "pinned": false,
+      "content": "<p><span class=\"h-card\"><a class=\"u-url mention\" href=\"https://kauaku.us/@poes\" rel=\"nofollow noreferrer noopener\" target=\"_blank\"><span>@poes</span></a></span><span> kan perintah sqlite vacuum om </span>​:neocat_think:​</p>",
+      "reblog": null,
+      "account": {
+        "id": "01HYFDZJR4AD4AEY95B3PY2MT8",
+        "username": "testeraphy",
+        "acct": "testeraphy@ktem.eu.org",
+        "display_name": "testeraphy",
+        "locked": false,
+        "discoverable": false,
+        "bot": false,
+        "created_at": "2024-05-22T05:57:07.698Z",
+        "note": "<p><span>Selfhost lagi karena sebelah penuh warna dan lemot.<br><br>Suka komputer, internet, teknologi, sbc, open source, sesuatu yang rahasia, asik, seru, menantang, lucu dimana saja. Suka maling dari internet juga.<br><br>Isi notes/catatan tidak begitu mencerminkan manusianya. Kadang suka maling gambar - gambar asik dari internet (mungkin NSFW), tetapi tenang saja karena biasanya saya beri flag sensitive content / content warning.</span></p>",
+        "url": "https://ice.ktem.eu.org/@testeraphy",
+        "avatar": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFDZWFJSWD930NE549N0ETS.png",
+        "avatar_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFDZWFJSWD930NE549N0ETS.jpg",
+        "header": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFE01KBWTEK4EJDT0FEEWNK.png",
+        "header_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFE01KBWTEK4EJDT0FEEWNK.jpg",
+        "followers_count": 0,
+        "following_count": 0,
+        "statuses_count": 309,
+        "last_status_at": "2024-09-07T03:15:22.332Z",
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Blog",
+            "value": "blog.netify.my.id",
+            "verified_at": null
+          },
+          {
+            "name": "Matrix",
+            "value": "@testeraphy:beeper.com",
+            "verified_at": null
+          },
+          {
+            "name": "Discord",
+            "value": "testeraphy",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "01V12MTP926SRNSP22TT3EE04K",
+          "username": "poes",
+          "url": "https://kauaku.us/@poes",
+          "acct": "poes"
+        }
+      ],
+      "tags": [],
+      "emojis": [
+        {
+          "shortcode": "neocat_think",
+          "url": "https://kauaku.us/fileserver/0142R8SV74V1T89D6DZ59CWZZ3/emoji/original/021NYR9GP5F51WYKJANBJESE29.webp",
+          "static_url": "https://kauaku.us/fileserver/0142R8SV74V1T89D6DZ59CWZZ3/emoji/static/021NYR9GP5F51WYKJANBJESE29.png",
+          "visible_in_picker": false
+        }
+      ],
+      "card": null,
+      "poll": null
+    }
+  },
+  {
+    "id": "01J741HBYRGDDKBJM3HP0TZ7TJ",
+    "type": "favourite",
+    "created_at": "2024-09-06T16:09:06.000Z",
+    "account": {
+      "id": "01HBNVKG2EZD9GGRF6TYHQAZFR",
+      "username": "me",
+      "acct": "me@fd.s4if.dev",
+      "display_name": "s4if 🇵🇸 🇮🇩",
+      "locked": false,
+      "discoverable": true,
+      "bot": false,
+      "created_at": "2023-10-01T14:52:14.599Z",
+      "note": "Warga Negara: <a class=\"hashtag\" href=\"https://fd.s4if.dev/tag/indonesia\" rel=\"tag ugc nofollow noreferrer noopener\" target=\"_blank\">#Indonesia</a><br>Pekerjaan Utama: Guru<br>Pekerjaan Sampingan: <a class=\"hashtag\" href=\"https://fd.s4if.dev/tag/programmer\" rel=\"tag ugc nofollow noreferrer noopener\" target=\"_blank\">#Programmer</a><br>Domisili: <a class=\"hashtag\" href=\"https://fd.s4if.dev/tag/magelang\" rel=\"tag ugc nofollow noreferrer noopener\" target=\"_blank\">#Magelang</a>, <a class=\"hashtag\" href=\"https://fd.s4if.dev/tag/indonesia\" rel=\"tag ugc nofollow noreferrer noopener\" target=\"_blank\">#Indonesia</a><br>Hobi: Ngoprek <a class=\"hashtag\" href=\"https://fd.s4if.dev/tag/linux\" rel=\"tag ugc nofollow noreferrer noopener\" target=\"_blank\">#Linux</a><br>Proud <a class=\"hashtag\" href=\"https://fd.s4if.dev/tag/hyprland\" rel=\"tag ugc nofollow noreferrer noopener\" target=\"_blank\">#Hyprland</a> User.. :)<br>[ I am searchable by tfr ]",
+      "url": "https://fd.s4if.dev/users/me",
+      "avatar": "https://kauaku.us/fileserver/01HBNVKG2EZD9GGRF6TYHQAZFR/attachment/original/01R1C5Z5RQWTCVCZKP9JXGFH3B.jpg",
+      "avatar_static": "https://kauaku.us/fileserver/01HBNVKG2EZD9GGRF6TYHQAZFR/attachment/small/01R1C5Z5RQWTCVCZKP9JXGFH3B.jpg",
+      "header": "https://kauaku.us/fileserver/01HBNVKG2EZD9GGRF6TYHQAZFR/attachment/original/0173XFW111VXBN460TD2DRWGST.jpg",
+      "header_static": "https://kauaku.us/fileserver/01HBNVKG2EZD9GGRF6TYHQAZFR/attachment/small/0173XFW111VXBN460TD2DRWGST.jpg",
+      "followers_count": 143,
+      "following_count": 240,
+      "statuses_count": 1030,
+      "last_status_at": "2024-09-06T16:34:59.715Z",
+      "emojis": [],
+      "fields": []
+    },
+    "status": {
+      "id": "01J73S65GAGJN7KF428D3C681N",
+      "created_at": "2024-09-06T13:43:11.114Z",
+      "in_reply_to_id": "01J73CHA55FDPAQYX5G5D2V29N",
+      "in_reply_to_account_id": "01V12MTP926SRNSP22TT3EE04K",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": "id",
+      "uri": "https://kauaku.us/users/poes/statuses/01J73S65GAGJN7KF428D3C681N",
+      "url": "https://kauaku.us/@poes/statuses/01J73S65GAGJN7KF428D3C681N",
+      "replies_count": 0,
+      "reblogs_count": 0,
+      "favourites_count": 1,
+      "favourited": false,
+      "reblogged": false,
+      "muted": false,
+      "bookmarked": false,
+      "pinned": false,
+      "content": "<p>habis bersih - bersih malah vps error, semua web service ane down. :aduh:<br>baru sempat benerin sekarang</p>",
+      "reblog": null,
+      "application": {
+        "name": "Phanpy Dev",
+        "website": "https://dev.phanpy.social"
+      },
+      "account": {
+        "id": "01V12MTP926SRNSP22TT3EE04K",
+        "username": "poes",
+        "acct": "poes",
+        "display_name": "poes :pla:",
+        "locked": false,
+        "discoverable": true,
+        "bot": false,
+        "created_at": "2023-02-12T14:41:53.000Z",
+        "note": "<p>Indonesian<br>:gooners: Gooner's karbitan, hanya dukung kalo menang saja.<br>Anggota Pemuda Dusun Karangkadempel.<br>Ane mungkin tidak akan membalas semua mentions.<br>Hati - hati akun ini benci dengan orang munafik dan kadang kala suka aneh. Untuk yang masih bingung dengan gendernya sendiri jangan follow akun ini, daripada sakit hati.<br>Semua post di instance ini tidak dibuat dengan bot maupun AI.</p><p><strong>Now</strong> : nungguin <a href=\"https://kauaku.us/tags/freecad\" class=\"mention hashtag\" rel=\"tag nofollow noreferrer noopener\" target=\"_blank\">#<span>Freecad</span></a> 0.22 rilis sampai bosan. Sedikit hiatus karena mastodon sudah ga semenarik dulu lagi.</p>",
+        "url": "https://kauaku.us/@poes",
+        "avatar": "https://kauaku.us/fileserver/01V12MTP926SRNSP22TT3EE04K/attachment/original/01J4TMYKSBHFFET67PR1ACBQ6C.png",
+        "avatar_static": "https://kauaku.us/fileserver/01V12MTP926SRNSP22TT3EE04K/attachment/small/01J4TMYKSBHFFET67PR1ACBQ6C.jpg",
+        "header": "https://kauaku.us/fileserver/01V12MTP926SRNSP22TT3EE04K/attachment/original/01AX4YG0RF0QTA7DB803F2NWMH.jpg",
+        "header_static": "https://kauaku.us/fileserver/01V12MTP926SRNSP22TT3EE04K/attachment/small/01AX4YG0RF0QTA7DB803F2NWMH.jpg",
+        "followers_count": 74,
+        "following_count": 135,
+        "statuses_count": 7571,
+        "last_status_at": "2024-09-07T03:32:28.853Z",
+        "emojis": [
+          {
+            "shortcode": "pla",
+            "url": "https://kauaku.us/fileserver/0142R8SV74V1T89D6DZ59CWZZ3/emoji/original/01BVDH03WW4GCN1XSCN4B4JS7P.png",
+            "static_url": "https://kauaku.us/fileserver/0142R8SV74V1T89D6DZ59CWZZ3/emoji/static/01BVDH03WW4GCN1XSCN4B4JS7P.png",
+            "visible_in_picker": true,
+            "category": "bangga"
+          },
+          {
+            "shortcode": "gooners",
+            "url": "https://kauaku.us/fileserver/0142R8SV74V1T89D6DZ59CWZZ3/emoji/original/01ENFK9F73J71E62510HC7FPM6.png",
+            "static_url": "https://kauaku.us/fileserver/0142R8SV74V1T89D6DZ59CWZZ3/emoji/static/01ENFK9F73J71E62510HC7FPM6.png",
+            "visible_in_picker": true,
+            "category": "emosi"
+          }
+        ],
+        "fields": [
+          {
+            "name": "Jurnal",
+            "value": "<a href=\"https://kusaeni.com\" rel=\"nofollow noreferrer noopener\" target=\"_blank\">https://kusaeni.com</a>",
+            "verified_at": null
+          },
+          {
+            "name": "Instagram",
+            "value": "<a href=\"https://instagram.com/kusaeni\" rel=\"nofollow noreferrer noopener\" target=\"_blank\">https://instagram.com/kusaeni</a>",
+            "verified_at": null
+          },
+          {
+            "name": "Akun Mastodon lainnya",
+            "value": "<span class=\"h-card\"><a href=\"https://mstdn.id/@poes\" class=\"u-url mention\" rel=\"nofollow noreferrer noopener\" target=\"_blank\">@<span>poes</span></a></span>",
+            "verified_at": null
+          }
+        ],
+        "custom_css": ":root {\n --gray1: #e3d5ca;\n --gray2: #F6F4F3;\n --gray4: #fff;\n --gray5: #F6F4F3;\n--fg-accent: #496495;\n --toot-bg: none;\n}\n\n\npre code {\noverflow-wrap: normal;\n  word-break: normal;\n  border-radius: .375rem;\n  background-color: #F6F4F3;\n  line-height: 1.5;\nfont-family: SF Mono,SFMono-Regular,ui-monospace,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;\nfont-size: 0.85em;}\n\np code {font-family: SF Mono,SFMono-Regular,ui-monospace,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;\nfont-size: 0.85em;}\n\n\nhtml, body {\n  background: #FAFAFA;\n  color: #474645;\n  }\n\n.profile .header {\n  background: #F6F4F2;\n  border: 1px solid #d6ccc2;\n}\n\nheader a h1 { color: #343433 !important; }\n\n.toot { box-shadow: none; margin-bottom:1em, background: #F6F4F3; }\n.status { background-color: #F6F4F3}\n.status .status-info { background-color: #ffffff; }",
+        "enable_rss": true,
+        "role": {
+          "name": "admin"
+        }
+      },
+      "media_attachments": [],
+      "mentions": [],
+      "tags": [],
+      "emojis": [
+        {
+          "shortcode": "aduh",
+          "url": "https://kauaku.us/fileserver/0142R8SV74V1T89D6DZ59CWZZ3/emoji/original/0193JMTG6CFRVJF5V5TFQBXT3S.png",
+          "static_url": "https://kauaku.us/fileserver/0142R8SV74V1T89D6DZ59CWZZ3/emoji/static/0193JMTG6CFRVJF5V5TFQBXT3S.png",
+          "visible_in_picker": true,
+          "category": "emosi"
+        }
+      ],
+      "card": null,
+      "poll": null,
+      "text": "habis bersih - bersih malah vps error, semua web service ane down. :aduh:\nbaru sempat benerin sekarang"
+    }
+  },
+  {
+    "id": "01J73X8SVQ3422J7ZNVC3G30WN",
+    "type": "follow",
+    "created_at": "2024-09-06T14:54:31.000Z",
+    "account": {
+      "id": "01HQDXPDJZM6CW6P5SZ24AZ3RM",
+      "username": "Radical_EgoCom",
+      "acct": "Radical_EgoCom@mastodon.social",
+      "display_name": "C Ⓐ T",
+      "locked": false,
+      "discoverable": false,
+      "bot": false,
+      "created_at": "2023-09-08T00:00:00.000Z",
+      "note": "<p>Status: Libertarian Communist; Atheist; Vegan</p><p>Pronouns: They/Them</p><p>Sexuality: Asexual</p><p>Likes: Libertarian Communism; Anthropology; Psychology; Atheism; Veganism; Cats</p><p>Dislikes: Capitalism/any form of private ownership of the means of production; The state and all other unjust hierarchies</p><p><a href=\"https://mastodon.social/tags/cats\" class=\"mention hashtag\" rel=\"tag nofollow noreferrer noopener\" target=\"_blank\">#<span>cats</span></a> <a href=\"https://mastodon.social/tags/catsofmastodon\" class=\"mention hashtag\" rel=\"tag nofollow noreferrer noopener\" target=\"_blank\">#<span>catsofmastodon</span></a> <a href=\"https://mastodon.social/tags/communism\" class=\"mention hashtag\" rel=\"tag nofollow noreferrer noopener\" target=\"_blank\">#<span>communism</span></a> <a href=\"https://mastodon.social/tags/anticapitalism\" class=\"mention hashtag\" rel=\"tag nofollow noreferrer noopener\" target=\"_blank\">#<span>anticapitalism</span></a></p><p>YouTube Channel: <a href=\"https://youtube.com/@AnarCat?si=FMLL2U6PuSvSLhjC\" rel=\"nofollow noopener noreferrer\" target=\"_blank\"><span class=\"invisible\">https://</span><span class=\"ellipsis\">youtube.com/@AnarCat?si=FMLL2U</span><span class=\"invisible\">6PuSvSLhjC</span></a></p>",
+      "url": "https://mastodon.social/@Radical_EgoCom",
+      "avatar": "https://kauaku.us/fileserver/01HQDXPDJZM6CW6P5SZ24AZ3RM/attachment/original/01HWMPJH7E214JE3V24FKHQR0N.png",
+      "avatar_static": "https://kauaku.us/fileserver/01HQDXPDJZM6CW6P5SZ24AZ3RM/attachment/small/01HWMPJH7E214JE3V24FKHQR0N.jpg",
+      "header": "https://kauaku.us/fileserver/01HQDXPDJZM6CW6P5SZ24AZ3RM/attachment/original/01HWMPJH8VBKAVNJG1B0W62G7Y.jpg",
+      "header_static": "https://kauaku.us/fileserver/01HQDXPDJZM6CW6P5SZ24AZ3RM/attachment/small/01HWMPJH8VBKAVNJG1B0W62G7Y.jpg",
+      "followers_count": 0,
+      "following_count": 1,
+      "statuses_count": 1,
+      "last_status_at": "2024-04-28T16:05:46.000Z",
+      "emojis": [],
+      "fields": [
+        {
+          "name": "Joined",
+          "value": "Sep 7, 2023",
+          "verified_at": null
+        }
+      ]
+    }
+  },
+  {
+    "id": "01J73W6KZHNNF73TCX7ZPTD5P4",
+    "type": "mention",
+    "created_at": "2024-09-06T14:35:51.000Z",
+    "account": {
+      "id": "01HYFDZJR4AD4AEY95B3PY2MT8",
+      "username": "testeraphy",
+      "acct": "testeraphy@ktem.eu.org",
+      "display_name": "testeraphy",
+      "locked": false,
+      "discoverable": false,
+      "bot": false,
+      "created_at": "2024-05-22T05:57:07.698Z",
+      "note": "<p><span>Selfhost lagi karena sebelah penuh warna dan lemot.<br><br>Suka komputer, internet, teknologi, sbc, open source, sesuatu yang rahasia, asik, seru, menantang, lucu dimana saja. Suka maling dari internet juga.<br><br>Isi notes/catatan tidak begitu mencerminkan manusianya. Kadang suka maling gambar - gambar asik dari internet (mungkin NSFW), tetapi tenang saja karena biasanya saya beri flag sensitive content / content warning.</span></p>",
+      "url": "https://ice.ktem.eu.org/@testeraphy",
+      "avatar": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFDZWFJSWD930NE549N0ETS.png",
+      "avatar_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFDZWFJSWD930NE549N0ETS.jpg",
+      "header": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFE01KBWTEK4EJDT0FEEWNK.png",
+      "header_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFE01KBWTEK4EJDT0FEEWNK.jpg",
+      "followers_count": 0,
+      "following_count": 0,
+      "statuses_count": 309,
+      "last_status_at": "2024-09-07T03:15:22.332Z",
+      "emojis": [],
+      "fields": [
+        {
+          "name": "Blog",
+          "value": "blog.netify.my.id",
+          "verified_at": null
+        },
+        {
+          "name": "Matrix",
+          "value": "@testeraphy:beeper.com",
+          "verified_at": null
+        },
+        {
+          "name": "Discord",
+          "value": "testeraphy",
+          "verified_at": null
+        }
+      ]
+    },
+    "status": {
+      "id": "01J73FB0DR7572FSB3ZF9RCED9",
+      "created_at": "2024-09-06T10:51:03.992Z",
+      "in_reply_to_id": "01J73F0F1R87A4AE6Z5BW1AHZM",
+      "in_reply_to_account_id": "01V12MTP926SRNSP22TT3EE04K",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": null,
+      "uri": "https://ice.ktem.eu.org/notes/9xu5tpyvemfn5cb1",
+      "url": "https://ice.ktem.eu.org/notes/9xu5tpyvemfn5cb1",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "favourited": false,
+      "reblogged": false,
+      "muted": false,
+      "bookmarked": false,
+      "pinned": false,
+      "content": "<p><span class=\"h-card\"><a class=\"u-url mention\" href=\"https://kauaku.us/@poes\" rel=\"nofollow noreferrer noopener\" target=\"_blank\"><span>@poes</span></a></span><span> oh, gts pakai postgres?</span></p>",
+      "reblog": null,
+      "account": {
+        "id": "01HYFDZJR4AD4AEY95B3PY2MT8",
+        "username": "testeraphy",
+        "acct": "testeraphy@ktem.eu.org",
+        "display_name": "testeraphy",
+        "locked": false,
+        "discoverable": false,
+        "bot": false,
+        "created_at": "2024-05-22T05:57:07.698Z",
+        "note": "<p><span>Selfhost lagi karena sebelah penuh warna dan lemot.<br><br>Suka komputer, internet, teknologi, sbc, open source, sesuatu yang rahasia, asik, seru, menantang, lucu dimana saja. Suka maling dari internet juga.<br><br>Isi notes/catatan tidak begitu mencerminkan manusianya. Kadang suka maling gambar - gambar asik dari internet (mungkin NSFW), tetapi tenang saja karena biasanya saya beri flag sensitive content / content warning.</span></p>",
+        "url": "https://ice.ktem.eu.org/@testeraphy",
+        "avatar": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFDZWFJSWD930NE549N0ETS.png",
+        "avatar_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFDZWFJSWD930NE549N0ETS.jpg",
+        "header": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFE01KBWTEK4EJDT0FEEWNK.png",
+        "header_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFE01KBWTEK4EJDT0FEEWNK.jpg",
+        "followers_count": 0,
+        "following_count": 0,
+        "statuses_count": 309,
+        "last_status_at": "2024-09-07T03:15:22.332Z",
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Blog",
+            "value": "blog.netify.my.id",
+            "verified_at": null
+          },
+          {
+            "name": "Matrix",
+            "value": "@testeraphy:beeper.com",
+            "verified_at": null
+          },
+          {
+            "name": "Discord",
+            "value": "testeraphy",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "01V12MTP926SRNSP22TT3EE04K",
+          "username": "poes",
+          "url": "https://kauaku.us/@poes",
+          "acct": "poes"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "card": null,
+      "poll": null
+    }
+  },
+  {
+    "id": "01J73DY3XWZQ2PQHTKWJPXJHJC",
+    "type": "mention",
+    "created_at": "2024-09-06T10:26:33.000Z",
+    "account": {
+      "id": "01HYFDZJR4AD4AEY95B3PY2MT8",
+      "username": "testeraphy",
+      "acct": "testeraphy@ktem.eu.org",
+      "display_name": "testeraphy",
+      "locked": false,
+      "discoverable": false,
+      "bot": false,
+      "created_at": "2024-05-22T05:57:07.698Z",
+      "note": "<p><span>Selfhost lagi karena sebelah penuh warna dan lemot.<br><br>Suka komputer, internet, teknologi, sbc, open source, sesuatu yang rahasia, asik, seru, menantang, lucu dimana saja. Suka maling dari internet juga.<br><br>Isi notes/catatan tidak begitu mencerminkan manusianya. Kadang suka maling gambar - gambar asik dari internet (mungkin NSFW), tetapi tenang saja karena biasanya saya beri flag sensitive content / content warning.</span></p>",
+      "url": "https://ice.ktem.eu.org/@testeraphy",
+      "avatar": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFDZWFJSWD930NE549N0ETS.png",
+      "avatar_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFDZWFJSWD930NE549N0ETS.jpg",
+      "header": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFE01KBWTEK4EJDT0FEEWNK.png",
+      "header_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFE01KBWTEK4EJDT0FEEWNK.jpg",
+      "followers_count": 0,
+      "following_count": 0,
+      "statuses_count": 309,
+      "last_status_at": "2024-09-07T03:15:22.332Z",
+      "emojis": [],
+      "fields": [
+        {
+          "name": "Blog",
+          "value": "blog.netify.my.id",
+          "verified_at": null
+        },
+        {
+          "name": "Matrix",
+          "value": "@testeraphy:beeper.com",
+          "verified_at": null
+        },
+        {
+          "name": "Discord",
+          "value": "testeraphy",
+          "verified_at": null
+        }
+      ]
+    },
+    "status": {
+      "id": "01J73DY2SEJHHWFXV2SEK1X10H",
+      "created_at": "2024-09-06T10:26:31.854Z",
+      "in_reply_to_id": "01J73CHA55FDPAQYX5G5D2V29N",
+      "in_reply_to_account_id": "01V12MTP926SRNSP22TT3EE04K",
+      "sensitive": false,
+      "spoiler_text": "",
+      "visibility": "public",
+      "language": null,
+      "uri": "https://ice.ktem.eu.org/notes/9xu4y626mqnk344g",
+      "url": "https://ice.ktem.eu.org/notes/9xu4y626mqnk344g",
+      "replies_count": 1,
+      "reblogs_count": 0,
+      "favourites_count": 0,
+      "favourited": false,
+      "reblogged": false,
+      "muted": false,
+      "bookmarked": false,
+      "pinned": false,
+      "content": "<p><span class=\"h-card\"><a class=\"u-url mention\" href=\"https://kauaku.us/@poes\" rel=\"nofollow noreferrer noopener\" target=\"_blank\"><span>@poes</span></a></span><span> pernah nyoba vacuum om?</span></p>",
+      "reblog": null,
+      "account": {
+        "id": "01HYFDZJR4AD4AEY95B3PY2MT8",
+        "username": "testeraphy",
+        "acct": "testeraphy@ktem.eu.org",
+        "display_name": "testeraphy",
+        "locked": false,
+        "discoverable": false,
+        "bot": false,
+        "created_at": "2024-05-22T05:57:07.698Z",
+        "note": "<p><span>Selfhost lagi karena sebelah penuh warna dan lemot.<br><br>Suka komputer, internet, teknologi, sbc, open source, sesuatu yang rahasia, asik, seru, menantang, lucu dimana saja. Suka maling dari internet juga.<br><br>Isi notes/catatan tidak begitu mencerminkan manusianya. Kadang suka maling gambar - gambar asik dari internet (mungkin NSFW), tetapi tenang saja karena biasanya saya beri flag sensitive content / content warning.</span></p>",
+        "url": "https://ice.ktem.eu.org/@testeraphy",
+        "avatar": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFDZWFJSWD930NE549N0ETS.png",
+        "avatar_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFDZWFJSWD930NE549N0ETS.jpg",
+        "header": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/original/01HYFE01KBWTEK4EJDT0FEEWNK.png",
+        "header_static": "https://kauaku.us/fileserver/01HYFDZJR4AD4AEY95B3PY2MT8/attachment/small/01HYFE01KBWTEK4EJDT0FEEWNK.jpg",
+        "followers_count": 0,
+        "following_count": 0,
+        "statuses_count": 309,
+        "last_status_at": "2024-09-07T03:15:22.332Z",
+        "emojis": [],
+        "fields": [
+          {
+            "name": "Blog",
+            "value": "blog.netify.my.id",
+            "verified_at": null
+          },
+          {
+            "name": "Matrix",
+            "value": "@testeraphy:beeper.com",
+            "verified_at": null
+          },
+          {
+            "name": "Discord",
+            "value": "testeraphy",
+            "verified_at": null
+          }
+        ]
+      },
+      "media_attachments": [],
+      "mentions": [
+        {
+          "id": "01V12MTP926SRNSP22TT3EE04K",
+          "username": "poes",
+          "url": "https://kauaku.us/@poes",
+          "acct": "poes"
+        }
+      ],
+      "tags": [],
+      "emojis": [],
+      "card": null,
+      "poll": null
+    }
+  }
+]

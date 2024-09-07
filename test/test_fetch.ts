@@ -1,8 +1,8 @@
-import { pool } from "./../db.ts";
-import { NeonData } from "./../NeonData.ts";
-import TurndownService from "turndown";
+// import { pool } from "./../db.ts";
+// import { NeonData } from "./../NeonData.ts";
+import { ensureFile } from "https://deno.land/std/fs/mod.ts";
 
-const conn = await pool.connect();
+// const conn = await pool.connect();
 
 async function requestNotif() {
   try {
@@ -15,32 +15,37 @@ async function requestNotif() {
     });
 
     const data = await f.json();
-    //console.log(data);
+    const datajson = JSON.stringify(data, null, 2);
 
-    for (const d of data) {
-      const remark: string = "USEND";
-      let inreply: string;
-      let content: string;
-      if (d.type === "follow") {
-        inreply = "null";
-        content = "null";
-      } else {
-        inreply = d.status.in_reply_to_id;
-        content = d.status.content;
-      }
+    const filePath = "./data.json";
+    await ensureFile(filePath);
+    await Deno.writeTextFile(filePath, datajson);
+    console.log("tersimpan");
 
-      //console.log(d.status.media_attachments);
-      for (const m of d.status.media_attachments) {
-        // const mediaUrl = m.url;
+    // for (const d of data) {
+    //   const remark: string = "USEND";
+    //   let inreply: string;
+    //   let content: string;
+    //   if (d.type === "follow") {
+    //     inreply = "null";
+    //     content = "null";
+    //   } else {
+    //     inreply = d.status.in_reply_to_id;
+    //     content = d.status.content;
+    //   }
 
-        await conn.queryObject<NeonData>`
-          INSERT INTO testtololdon
-          (inreplyto, post_id, created_at, handler, display_name, type, status, url, remark, media)
-          VALUES
-          (${inreply}, ${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${content}, ${d.status.url}, ${remark}, ${mediaUrl} )
-          ON CONFLICT (post_id) DO NOTHING`;
-      }
-    }
+    //   //console.log(d.status.media_attachments);
+    //   for (const m of d.status.media_attachments) {
+    //     // const mediaUrl = m.url;
+
+    //     await conn.queryObject<NeonData>`
+    //       INSERT INTO testtololdon
+    //       (inreplyto, post_id, created_at, handler, display_name, type, status, url, remark, media)
+    //       VALUES
+    //       (${inreply}, ${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${content}, ${d.status.url}, ${remark}, ${mediaUrl} )
+    //       ON CONFLICT (post_id) DO NOTHING`;
+    //   }
+    // }
   } catch (err) {
     console.log(err);
   }

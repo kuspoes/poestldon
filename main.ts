@@ -5,10 +5,9 @@ import TurndownService from "turndown";
 const conn = await pool.connect();
 // punya endpoint tapi tak punya token itu sami mawon ga bisa konek
 // saat push hapus endpoint url karena tidak akan terbaca di deploy
-const kv = await Deno
-  .openKv
-  //"https://api.deno.com/databases/8224906d-742a-4220-9a66-638bf8d37da3/connect",
-  ();
+const kv = await Deno.openKv(
+  "https://api.deno.com/databases/8224906d-742a-4220-9a66-638bf8d37da3/connect",
+);
 
 async function requestNotif() {
   try {
@@ -45,10 +44,11 @@ async function requestNotif() {
             content = d.status.content;
           }
 
-          let mediaUrl = [];
-          for await (const media of d.status.media_attachments) {
-            mediaUrl = media.url;
-          }
+          const check = {
+            userId: d.id,
+            type: d.type,
+          };
+          console.log(check);
 
           if (d.type === "follow") {
             conn.queryObject<NeonData>`
@@ -61,9 +61,9 @@ async function requestNotif() {
           } else {
             conn.queryObject<NeonData>`
                 INSERT INTO poestololdon
-                (inreplyto, post_id, created_at, handler, display_name, type, status, url, remark, media)
+                (inreplyto, post_id, created_at, handler, display_name, type, status, url, remark)
                 VALUES
-                (${inreply}, ${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${content}, ${d.status.url}, ${remark}, ${mediaUrl})
+                (${inreply}, ${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${content}, ${d.status.url}, ${remark})
                 ON CONFLICT (post_id) DO NOTHING
               `;
           }
@@ -131,15 +131,6 @@ ${flag} ${d.type} you!
           //link = `https://dev.phanpy.social/#/kauaku.us/s/${d.inreplyto}`;
         }
 
-        let mediaUrl;
-        if (d.media === null || d.media === "{}") {
-          mediaUrl = "❞";
-        } else {
-          mediaUrl = `❞
-
-            <img src="${d.media}" alt="img" />`;
-        }
-
         const td = new TurndownService();
         td.addRule("Remove link", {
           filter: ["a"],
@@ -149,7 +140,6 @@ ${flag} ${d.type} you!
         });
 
         const t_content = td.turndown(d.status);
-        const attachements = td.turndown(mediaUrl);
         //console.log(t_content);
 
         await fetch(
@@ -166,7 +156,7 @@ ${flag} ${d.type} you!
 _${d.handler}_
 ${flag}  ${d.type} your post!
 
-❝${t_content} ${attachements}
+❝${t_content}❞
 
 [source](${link})
 
