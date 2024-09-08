@@ -3,11 +3,11 @@ import { NeonData } from "./NeonData.ts";
 import TurndownService from "turndown";
 
 const conn = await pool.connect();
+
 // punya endpoint tapi tak punya token itu sami mawon ga bisa konek
 // saat push hapus endpoint url karena tidak akan terbaca di deploy
-// const kv = await Deno.openKv(
-//   "https://api.deno.com/databases/8224906d-742a-4220-9a66-638bf8d37da3/connect",
-// );
+// "https://api.deno.com/databases/8224906d-742a-4220-9a66-638bf8d37da3/connect",
+
 const kv = await Deno.openKv();
 
 async function requestNotif() {
@@ -44,12 +44,6 @@ async function requestNotif() {
             inreply = d.status.in_reply_to_id;
             content = d.status.content;
           }
-
-          const check = {
-            userId: d.id,
-            type: d.type,
-          };
-          console.log(check);
 
           if (d.type === "follow") {
             conn.queryObject<NeonData>`
