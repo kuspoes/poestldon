@@ -222,11 +222,11 @@ async function sendLogTele(msg: string) {
   }
 }
 
-Deno.cron("Request", "*/2 * * * *", () => {
+Deno.cron("Request", "*/3 * * * *", () => {
   requestNotif();
 });
 
-Deno.cron("kirim", "*/1 * * * *", () => {
+Deno.cron("kirim", "*/2 * * * *", () => {
   sendNotif();
 
   setTimeout(() => {
