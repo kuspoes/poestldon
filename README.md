@@ -5,7 +5,25 @@ Ini adalah script sederhana untuk menarik data notifikasi dari API Gotosocial. K
 # Cara pakai
 1. Clone repositori ini,
 2. Buat file `.env` di root directory repository yang di-clone
-3. Push ke Deno Deploy, bisa dengan Deploy CLI atau pakai Github Integration.
+3. Init DB
+4. Push ke Deno Deploy, bisa dengan Deploy CLI atau pakai Github Integration.
+
+## InitDB
+Disini ane mempergunakan layanan DB Postgres gratis dari Neon.Tech. Ada 2 DB yang dibuat yaitu DB utama untuk menyimpan data notifikasi dan DB kedua yang berisi data post_id notifikasi.
+
+DB kedua ini perlu ada untuk memastikan agar yang disimpan ke DB utama adalah notifikasi baru (meski sudah pakai ON CONFLICT) di script Postgresnya. Tujuannya adalah "menghemat" id baris di table.
+
+Tapi sampai sekarang sepertinya belum sukses. Whatever.
+
+Jika suka pakai DB key value, jalankan juga `initKv.ts`, disini pakai DenoKv yang sudah tersedia di Deno Deploy.
+
+Semua proses dijalankan dengan perintah seperti berikut :
+```shell
+$ deno run -A --env --unstable-cron --unstable-kv main.ts
+```
+
+hilangkan `--unstable-kv jika tidak pakai DB key value DenoKv.
+
 
 ## Environment
 Daftar environment yang dipakai:
