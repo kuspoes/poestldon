@@ -6,7 +6,7 @@ const conn = await pool.connect();
 
 async function requestNotif() {
   try {
-    const getId = await conn.queryObject`
+    const getId = await conn.queryObject<NeonData>`
         SELECT post_id
         FROM poestololdon
         ORDER BY created_at DESC
@@ -14,7 +14,7 @@ async function requestNotif() {
       `;
     const res = getId.rows;
 
-    const id = [];
+    const id: string[] = [];
     for await (const r of res) id.push(r.post_id);
 
     const f = await fetch(`${Deno.env.get("GTS_API")}`, {
@@ -26,7 +26,7 @@ async function requestNotif() {
     });
 
     const data = await f.json();
-    const data_id = [];
+    const data_id: string[] = [];
     for await (const d of data) data_id.push(d.id);
 
     for await (const i of id) {
