@@ -12,3 +12,8 @@ export interface NeonData {
   remark: string;
   media: string;
 }
+
+export interface NeonIdData {
+  id: number;
+  post_id: string;
+}

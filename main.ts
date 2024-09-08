@@ -1,16 +1,16 @@
 import { pool } from "./db.ts";
-import { NeonData } from "./NeonData.ts";
+import { NeonData, NeonIdData } from "./NeonData.ts";
 import TurndownService from "turndown";
 
 const conn = await pool.connect();
 
 async function requestNotif() {
   try {
-    const getId = await conn.queryObject<NeonData>`
+    const getId = await conn.queryObject<NeonIdData>`
         SELECT post_id
-        FROM poestololdon
-        ORDER BY created_at DESC
-        LIMIT 5
+        FROM poeskoclokdon
+        ORDER BY id DESC
+        LIMIT 10
       `;
     const res = getId.rows;
 
