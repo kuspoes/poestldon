@@ -4,14 +4,19 @@ import TurndownService from "turndown";
 
 const conn = await pool.connect();
 
-// punya endpoint tapi tak punya token itu sami mawon ga bisa konek
-// saat push hapus endpoint url karena tidak akan terbaca di deploy
-// "https://api.deno.com/databases/8224906d-742a-4220-9a66-638bf8d37da3/connect",
-
-const kv = await Deno.openKv();
-
 async function requestNotif() {
   try {
+    const getId = await conn.queryObject`
+        SELECT post_id
+        FROM poestololdon
+        ORDER BY created_at DESC
+        LIMIT 5
+      `;
+    const res = getId.rows;
+
+    const id = [];
+    for await (const r of res) id.push(r.post_id);
+
     const f = await fetch(`${Deno.env.get("GTS_API")}`, {
       method: "GET",
       headers: {
@@ -24,14 +29,10 @@ async function requestNotif() {
     const data_id = [];
     for await (const d of data) data_id.push(d.id);
 
-    const kvData = kv.list({ prefix: ["notif_id"] });
-    const kvDataId = [];
-    for await (const k of kvData) kvDataId.push(k.value);
-
-    for (const v of kvDataId) {
-      const x = data_id.includes(v);
-      if (x == true) {
-        console.log("data sudah ada");
+    for await (const i of id) {
+      const check = data_id.includes(i);
+      if (check) {
+        console.log("sudah tersedia");
       } else {
         for (const d of data) {
           const remark: string = "USEND";
@@ -61,12 +62,6 @@ async function requestNotif() {
                 (${inreply}, ${d.id}, ${d.created_at}, ${d.account.acct}, ${d.account.display_name}, ${d.type}, ${content}, ${d.status.url}, ${remark})
                 ON CONFLICT (post_id) DO NOTHING
               `;
-          }
-        }
-        for (const di of data_id) {
-          const res = await kv.set(["notif_id", di], di);
-          if (!res.ok) {
-            throw new Error(`tidak bisa menulis ke KV!`);
           }
         }
       } // else
