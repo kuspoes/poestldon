@@ -227,13 +227,16 @@ async function sendLogTele(msg: string) {
   }
 }
 
-Deno.cron("Sedot-simpan-kirim", "*/2 * * * *", () => {
+Deno.cron("Request", "*/2 * * * *", () => {
   requestNotif();
-  console.log("fetch data from gotosocial at ", Date());
+});
+
+Deno.cron("kirim", "*/1 * * * *", () => {
   sendNotif();
-  console.log("send data to telegram", Date());
-  markNotif();
-  console.log("mark data as send");
+
+  setTimeout(() => {
+    markNotif();
+  }, 5000);
 });
 
 Deno.cron("Bersih - bersih data", "0 0 1 * *", () => {
