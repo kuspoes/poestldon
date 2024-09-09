@@ -21,8 +21,9 @@ Semua proses dijalankan dengan perintah seperti berikut :
 ```shell
 $ deno run -A --env --unstable-cron --unstable-kv main.ts
 ```
+Sesuaikan dengan proses, jika hendak bikin db ganti `main.ts` dengan `initDb.ts` dan sebagainya.
 
-hilangkan `--unstable-kv jika tidak pakai DB key value DenoKv.
+hilangkan `--unstable-kv` jika tidak pakai DB key value DenoKv.
 
 
 ## Environment

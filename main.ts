@@ -63,6 +63,13 @@ async function requestNotif() {
                 ON CONFLICT (post_id) DO NOTHING
               `;
           }
+          await conn.queryObject<NeonIdData>`
+            INSERT INTO poeskoclokdon
+            (post_id)
+            VALUES
+            (${d.id})
+            ON CONFLICT (post_id) DO NOTHING
+          `;
         }
       } // else
     }
@@ -222,16 +229,16 @@ async function sendLogTele(msg: string) {
   }
 }
 
-Deno.cron("Request", "*/3 * * * *", () => {
+Deno.cron("Notifikasi", "*/3 * * * *", () => {
   requestNotif();
-});
 
-Deno.cron("kirim", "*/2 * * * *", () => {
-  sendNotif();
+  setTimeout(() => {
+    sendNotif();
+  }, 10000);
 
   setTimeout(() => {
     markNotif();
-  }, 5000);
+  }, 30000);
 });
 
 Deno.cron("Bersih - bersih data", "0 0 1 * *", () => {
