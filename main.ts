@@ -32,7 +32,7 @@ async function requestNotif() {
     for await (const i of id) {
       const check = data_id.includes(i);
       if (check) {
-        console.log("sudah tersedia");
+        console.log("data sudah ada");
       } else {
         for (const d of data) {
           const remark: string = "USEND";
@@ -197,6 +197,13 @@ async function deleteNotif() {
         remark VARCHAR(10)),
         media VARCHAR(1000),
       `;
+
+    await conn.queryObject`
+      DROP TABLE poeskoclokdon;
+      CREATE TABLE poeskoclokdon(
+        id SERIAL PRIMARY KEY,
+        post_id VARCHAR(100) UNIQUE)
+      `;
     await requestNotif();
     await markNotif();
   } catch (err) {
@@ -229,21 +236,21 @@ async function sendLogTele(msg: string) {
   }
 }
 
-Deno.cron("Notifikasi", "*/3 * * * *", () => {
-  requestNotif();
+// Deno.cron("Notifikasi", "*/3 * * * *", () => {
+//   requestNotif();
 
-  setTimeout(() => {
-    sendNotif();
-  }, 10000);
+//   setTimeout(() => {
+//     sendNotif();
+//   }, 10000);
 
-  setTimeout(() => {
-    markNotif();
-  }, 30000);
-});
+//   setTimeout(() => {
+//     markNotif();
+//   }, 30000);
+// });
 
-Deno.cron("Bersih - bersih data", "0 0 1 * *", () => {
-  deleteNotif();
-  sendLogTele("Proses pembersihan database telah dilakukan");
-});
+// Deno.cron("Bersih - bersih data", "0 0 1 * *", () => {
+//   deleteNotif();
+//   sendLogTele("Proses pembersihan database telah dilakukan");
+// });
 
 Deno.serve({ port: 80 }, (_req) => new Response("Avada Kenava!"));
